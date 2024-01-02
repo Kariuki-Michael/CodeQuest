@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Storage Plans</title>
+        <meta name="description" content="iCodeThis Challenge #001">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="current-storage">
+                <span class="heading">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <h2>Total Storage</h2>
+                </span>
+                <div class="capacity">
+                    <div class="chart">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <span class="storage">
+                        <div class="total-storage">
+                            <h2>30 GB</h2>
+                            <h4>Total storage</h4>
+                        </div>
+                        <div class="used-storage">
+                            <h2>3.6 GB</h2>
+                            <h4>10% used</h4>
+                        </div>
+                        <button>View details</button>
+                    </span>
+                </div>
+            </div>
+            <div class="plans">
+                <h3>Plans</h3>
+                <div class="packages current-plan">
+                    <div class="line line-1"></div>
+                    <h2>30 GB</h2>
+                    <h4>Current Plan</h4>
+                </div>
+                <div class="packages premium-plan">
+                    <Span>
+                        <div class="line line-2"></div>
+                        <h2>100 GB</h2>
+                    </Span>
+                    <span class="plan">
+                        <button>NOK 17.00/month</button>
+                        <p>Or prepay anually NOK 170.00/year</p>
+                    </span>
+                </div>
+                <div class="packages premium-plan">
+                    <span>
+                        <div class="line line-3"></div>
+                        <h2>1 TB</h2>
+                    </span>
+                    <span class="plan">
+                        <button>NOK 89.00/month</button>
+                        <p>Or prepay anually NOK 899.00/year</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <script src="pie.js"></script>
+    </body>
+</html>
