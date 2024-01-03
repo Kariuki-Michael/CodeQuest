@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #0a397f;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.card{
+    background: #0e46a0;
+    width: 275px;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 3px 4px #042158;
+    border-radius: 4px;
+}
+img{
+    border-radius: 4px;
+    position: relative;
+    top: -1%;
+    align-self: center;
+    width: 300px;
+    z-index: 3;
+    height: auto;
+}
+ul > li{
+    list-style: none;
+    line-height: 1.6em;
+    margin: 8px 0 8px -8px;
+}
+li > a{
+    text-decoration: none;
+    color: #defffe;
+    cursor: pointer;
+}
+li > a:hover{
+    text-decoration: underline;
+}
+.card button{
+    background: #ffc928;
+    color: #0a3d87;
+    cursor: pointer;
+    position: relative;
+    right: -8%;
+    bottom: 6%;
+    z-index: 3;
+    align-self: flex-end;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.4em;
+    padding: 6px 4px;
+    border: none;
+    border-radius: 2px;
+}
+button:hover{
+    box-shadow: 1px 1px 3px 4px #042158;
+    transform: scale(1.1);
+    transition: .4s ease-in;
+}
