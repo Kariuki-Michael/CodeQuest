@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Titillium+Web&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #2d3c41;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calculator input{
+    width: 60px;
+    height: 60px;
+    background: #35444f;
+    color: #e2ecef;
+    margin-left: -4px;
+    margin-bottom: 2px;
+    border: none;
+    outline: none;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+.calculator input[type=button]:hover{
+    color: #3f79ff;
+}
+.calculator .screen input{
+    width: 101%;
+    text-align: right;
+    background: #fefefe;
+    color: #2e383a;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    padding-right: 8px;
+}
+input.equal{
+    width: 120px;
+    background: #d61a61;
+    border-bottom-right-radius: 4px;
+    margin-left: -2px;
+}
+input.border{
+    border-bottom-left-radius: 4px;
+}
