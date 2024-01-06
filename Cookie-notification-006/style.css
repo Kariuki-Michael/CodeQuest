@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ededf6;
+}
+.notification-panel{
+    width: 75%;
+    background: #7089df;
+    color: #f8fffe;
+    padding: 24px 32px 24px 48px;
+    border-radius: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 110px;
+    box-shadow: -1px  3px 8px 3px #b2beec;
+}
+.notification-panel p{
+    font-size: .9rem;
+    letter-spacing: .06rem;
+    font-weight: 100;
+    color: #cdd8fc;
+}
+p.notification-text a{
+    font-weight: 600;
+    color: #f8fffe;
+    cursor: pointer;
+}
+.notification-panel i{
+    cursor: pointer;
+    font-size: 1.8rem;
+    padding: 16px 16px;
+    border-radius: 50%;
+    background: #5f78d4;
+    text-align: center;
+}
+.cookie-card{
+    background: #fefeff;
+    width: 30%;
+    text-align: center;
+    margin-top: 64px;
+    padding: 40px 40px;
+    border-radius: 16px;
+}
+.cookie-card i.fa-xmark{
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 8px 8px;
+    border-radius: 50%;
+    border: 1px solid black;
+    float: right;
+    position: relative;
+    top: -20px;
+    left: 24px;
+}
+.cookie-card i.fa-cookie-bite{
+    font-size: 4.0rem;
+    color: #c97644;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 18px 18px;
+    border-radius: 50%;
+    background: #fef2eb;
+}
+.cookie-card p{
+    line-height: 1.4;
+    color: #181819;
+    padding: 0px 40px;
+}
+.cookie-card p a{
+    color: #181819;
+}
+.cookie-card .btn{
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+.cookie-card .btn button{
+    cursor: pointer;
+    margin-top: 24px;
+    padding: 16px 32px;
+    border-radius: 48px;
+    background: transparent;
+    border: 1px solid blue;
+    font-size: .9rem;
+    font-weight: 600;
+    color: blue;
+}
+a.settings-link{
+    color: #181819;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
