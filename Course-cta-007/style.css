@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #16103b;
+}
+.container{
+    background-image: linear-gradient(to bottom right, #d5eeee, #d9e6df);
+    padding: 96px 48px 96px 32px;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    grid-template-rows: 1fr 1fr;
+    gap: 48px;
+}
+.card{
+    text-align: left;
+    border-radius: 16px;
+    padding: 24px 32px;
+}
+.card h3{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+.card h2{
+    font-size: 2.0rem;
+}
+.graduates p{
+    margin-top: 12px;
+    line-height: 1.3;
+    font-size: .9rem;
+}
+.portfolio h2{
+    margin-top: 12px;
+}
+.portfolio p{
+    margin-top: 12px;
+    line-height: 1.3;
+    font-size: .9rem;
+}
+.enrollment h3{
+    margin-left: 8px;
+}
+.enrollment h4{
+    line-height: 2.4;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: .8rem;
+    padding-left: 8px;
+}
+.enrollment h4.active-e{
+    background: #c3e1da;
+    border-radius: 4px
+}
+.deadline{
+    position: relative;
+    top: 24%;
+    background: #c5ded8;
+    line-height: 1.6;
+}
+.deadline p.deadline-txt{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.deadline p.deadline-date{
+    font-weight: 600;
+}
+.application{
+    grid-row: 1 / -1;
+    grid-column: 3 / 4;
+    background: rgba(221, 234, 230, 0.249);
+    border: 1px solid white;
+}
+.application ul{
+    font-size: .9rem;
+    margin-top: 32px;
+}
+.application ul li::marker {
+    content: '✓';
+    color: #14182b;
+    font-weight: bold;
+    font-size: 18px;
+} 
+.application ul li{
+    margin: 8px;
+    padding-left: 12px;
+}
+.application button{
+    cursor: pointer;
+    padding: 12px 48px;
+    margin-top: 56px;  
+    position: relative;
+    left: 10%;
+    background: #ffa493;
+    color: #2f1026;
+    font-weight: bolder;
+    border: none;
+    border-radius: 4px;
+    box-shadow: -1px 2px 4px 3px #e4cfc8;
+}
