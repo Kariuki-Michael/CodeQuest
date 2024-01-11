@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.grid-container{
+    background: bisque;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns:repeat(auto-fill, 18%);
+    grid-template-rows: repeat(auto-fill, 1fr );
+    gap: 24px;
+    justify-items: center;
+}
+.project-card{
+    position: relative;
+    left: 16px;
+    margin-top: 24px;
+    background: aliceblue;
+    border-radius: 8px;
+    padding: 24px 16px;
+    box-shadow: 4px 4px 3px 2px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img{
+    max-width: 16vw;
+    height: auto;
+    border-radius: 4px;
+}
+h2{
+    font-size: 1.3rem;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+h3{
+    font-weight: 400;
+    font-size: .9em;
+    margin-bottom: 8px;
+}
+.credits span{
+    display: flex;
+    gap: 8px;
+}
+.credits span h3{
+    font-weight: bold;
+    font-size: 1.0em;
+}
+.credits span a{
+    color: blueviolet;
+    cursor: pointer;
+    font-size: 1.1rem;
+    letter-spacing: .05em;
+    margin-bottom: 24px;
+}
+.credits span a:hover{
+    color: blue;
+}
+button{
+    padding: 12px 32px;
+    align-self: center;
+    border-radius: 4px;
+    border: none;
+    background: #e29f0f;
+    font-size: .9em;
+    font-weight: bold;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+button:hover{
+    box-shadow: 2px 2px 3px 2px gray;
+}
