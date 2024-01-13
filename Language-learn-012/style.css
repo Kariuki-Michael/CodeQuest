@@ -1,0 +1,244 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600&display=swap');
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    background: #161a3e;
+}
+.container-bg{
+    background: #202750;
+    height: 100vh;
+    width: 40%;
+    margin: 0 auto;
+}
+.container{
+    position: absolute;
+    top: 4%;
+    left: 20%;
+    display: flex;
+    gap: 40px;
+}
+.tier-card{
+    border-radius: 8px;
+    width: 320px;
+    padding: 32px 40px;
+    background: #fffefe;
+}
+h2{
+    font-weight: 600;
+}
+.tier-card p{
+    font-weight: 400;
+    font-size: .9rem;
+}
+.tier{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tier button{
+    cursor: pointer;
+    font-size: 1.0rem;
+    padding: 12px 32px;
+    border-radius: 14px;
+    background: none;
+    font-weight: 600;
+}
+.active__tier{
+    background: #ebecf8;
+    padding: 0 8px;
+    border-radius: 8px;
+}
+.active__tier button{
+    background-image: linear-gradient(90deg, #fa7b5b, #ff9538);
+    color: #feebdb;
+    border: none;
+}
+.language-card{
+    width: 480px;
+    text-align: center;
+    background: #fffefe;
+    border-radius: 8px;
+}
+div.progress-bar{
+    width: 320px;
+    height: 4px;
+    border-radius: 6px;
+    background: #7085f6;
+    position: relative;
+    top: 40px;
+    margin: 0 auto;
+}
+.language-card h2{
+    margin-top: 120px;
+}
+.language-card fieldset{
+    margin-top: 48px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 140px;
+    line-height: 3.2rem;
+    font-size: 1.3rem;
+}
+.language-card button{
+    cursor: pointer;
+    width: 100%;
+}
+button.skip-btn{
+    padding: 12px 0;
+    font-size: 1.1rem;
+    color: #8c9093;
+    background: transparent;
+    border: 2px solid #7d7e7fca;
+}
+button.submit-btn{
+    padding: 60px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: none;
+    background-image: linear-gradient(90deg, #fa7b5b, #ff9538);
+    color: #fff6eb;
+}
+.round-progress{
+    box-shadow: 2px 2px 5px 1px #201f1fe6;
+    background: #fffefe;
+    border-radius: 8px;
+    text-align: center;
+    width: 280px;
+    z-index: 99;
+    position: relative;
+    top: -26%;
+    margin-left: -160px;
+    padding-bottom: 24px;
+}
+img{
+    margin-top: 32px;
+    max-width: 90px;
+    height: auto;
+    background: whitesmoke;
+    border: 4px solid #6982fa;
+    border-radius: 50%;
+}
+.round-progress h2{
+    margin-top: 24px;
+}
+.round-progress button{
+    padding: 12px 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: none;
+    border-radius: 12px;
+    border: 3px solid #e6cabd;
+    margin-top: 24px;
+    cursor: pointer;
+}
+@media (max-width: 1024px){
+    body{
+        overflow: hidden;
+    }
+    .container{
+        left: 0;
+    }
+    .tier-card{
+        max-width: 280px;
+    }
+    .language-card{
+        max-width: 400px;
+    }
+    .round-progress{
+        margin-left: -240px;
+    }
+    fieldset{
+        margin-top: 24px;
+        line-height: 1.2rem;
+        margin-left: 24px;
+    }
+}
+@media (max-width: 768px){
+    body{
+        overflow: hidden;
+    }
+    .container{
+        padding-left: 25px;
+    }
+    .tier-card{
+        max-width: 200px;
+        padding: 8px 8px;
+    }
+    .language-card{
+        max-width: 300px;
+    }
+    .round-progress{
+        margin-left: -240px;
+    }
+    .language-card fieldset{
+        margin-top: -8px;
+        line-height: 1.3rem;
+        margin-left: 24px;
+        font-size: 1.0rem;
+    }
+    .language-card h2{
+        margin-top: 48px;
+    }
+    button.submit-btn{
+        padding: 32px 0;
+    }
+    .round-progress{
+        width: 180px;
+        margin-left: -24px;
+        top: -4%;
+    }
+    .round-progress button{
+        padding: 12px 24px;
+    }
+    div.progress-bar{
+        width: 160px;
+    }
+    .tier{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 640px){
+    body{
+        overflow: hidden;
+    }
+    .container{
+        top: 0;
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        max-width: 100%;
+    }
+    .tier-card{
+        max-width: 280px;
+    }
+    .language-card{
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    button.submit-btn{
+        padding: 12px 16px;
+    }
+    .round-progress{
+        padding: 4px 4px ;
+        margin-left: 16px;
+    }
+    .round-progress button{
+        margin: 0;
+    }
+    .round-progress h2{
+        margin: 0;
+    }
+    .round-progress img{
+        margin: 2px;
+    }
+}
