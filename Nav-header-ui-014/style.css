@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    background: #fef5f8;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1536px;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: flex;
+    gap: 48px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-1,
+.header-2
+{
+    width: 100%;
+    background-image: linear-gradient(to right, #ba80ff, #fe6a96);
+    color: #fff9ff;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+}
+h1{
+    font-size: 1.1rem;
+}
+h2.day-count{
+    text-align: center;
+    border: 1px solid #ef94e4;
+    border-radius: 4px;
+    padding: 6px;
+    line-height: 1.4rem;
+}
+.day-count span{
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+ul.nav-links{
+    display: flex;
+    gap: 24px;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    font-size: 1.0rem;
+    color: #fff9ff;
+}
+ul li a:hover{
+    color: rgb(0, 72, 255);
+}
+.content{
+    text-align: center;
+    padding: 48px 0 24px 0;
+    line-height: 2.0rem;
+}
+.header-txt{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.0rem;
+}
+.content h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.content p.unsub{
+    font-size: .7rem;
+    font-weight: 300;
+}
+.wrapper{
+    margin-block: 8px;
+}
+input{
+    padding: 8px 10px;
+    font-size: 1.0rem;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background: #bb60b3;
+    color: #fff9ff;
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+    padding: 8px 16px;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    color: #fff9ff;
+    border: 1px solid #fff9ff;
+}
+@media (max-width: 768px){
+    ul.nav-links{
+        display: none;
+    }
+}
+@media (max-width: 475px){
+    .content{
+        padding-left: .5rem;
+        padding-right: .5rem;
+        line-height: 1.5rem;
+    }
+    .content h2{
+        font-size: 1.0rem;
+    }
+    .header-txt{
+        font-size: .8rem;
+    }
+    h1{
+        font-size: .8rem;
+    }
+    .wrapper{
+        padding: 0 24px;
+    }
+    input{
+        width: 100%;
+    }
+    button{
+        width: 100%;
+        margin-top: 12px;
+    }
+}
