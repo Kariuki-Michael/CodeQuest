@@ -1,0 +1,117 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    background: #e9e1fe;
+}
+.container{
+    max-width: 50%;
+    padding: 32px 48px;
+    background: #ffffff;
+    box-shadow: 0px 0px 8px 4px #ccc4e0;
+}
+.title{
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    background: #cbcaca;
+    color: #0a0b0a;
+    font-weight: 600;
+    padding: 2px 2px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 3px 1px #cbcaca;
+}
+.typography .fontStyle{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.typography .fontFamily{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.fontFamily .arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fontFamily .times{
+    font-family: 'Times New Roman', Times, serif;
+}
+.typography{
+    margin-top: 16px;
+    margin-bottom: 24px;
+    display: grid;
+    gap: 16px;
+}
+.typography .decoration{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.decoration .underline{
+    text-decoration: underline;
+}
+.decoration .sthrough{
+    text-decoration: line-through;
+}
+.headings{
+    margin-top: 16px;
+    margin-bottom: 24px;
+    display: grid;
+    gap: 16px;
+}
+.colours{
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+.colours div{
+    width: 100px;
+    height: 100px;
+}
+.colours .orange{
+    margin-bottom: 8px;
+    color: orangered;
+}
+.colours .orange-sqr{
+    background: orangered;
+    margin-bottom: 8px;
+}
+.colours .purple{
+    margin-bottom: 8px;
+    color: purple;
+}
+.colours .purple-circle{
+    background: purple;
+    border-radius: 50%;
+}
+button{
+    font-size: 1.2rem;
+    padding: 12px 23px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    margin-top: 12px;
+    cursor: pointer;
+}
+.buttons p{
+    margin-top: 8px;
+    font-weight: 600;
+    letter-spacing: .04rem;
+}
+button.default{
+    background: #4621ac;
+    color: #f9e8ff;
+}
+button:hover{
+    background: #866cdc;
+}
+button:active{
+    background: #cfc3f1;
+    color: #06071f;
+}
