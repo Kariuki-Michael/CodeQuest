@@ -1,0 +1,151 @@
+*,
+::after,
+::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1rem;
+    background: linear-gradient(to top right, #d6f3e5, #f0f3f1, #daf3e4);
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    max-width: 400px;
+    border-radius: 24px;
+    height: 720px;
+    overflow: hidden;
+    box-shadow: 4px 3px 16px 8px #ead4d5;
+}
+i{
+    cursor: pointer;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 18px;
+    font-size: 1.2rem;
+    background: #db6e51;
+    color: #fff8e6;
+}
+header i{
+    color: #fabfa7;
+    transition: all 1s ease;
+}
+header i:hover,
+header i:active{
+    color: #fff8e6;
+}
+header h2{
+    font-size: 1.4rem;
+}
+main.content{
+    overflow: hidden;
+}
+.restaurant-card{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 16px 8px;
+    background: #f48365;
+    border-bottom: 2px solid #e47257;
+    color: #fefcf2;
+}
+.restaurant-card:hover,
+.restaurant-card:active{
+    background: #db6e51;
+}
+.restaurant-profile{
+    display: grid;
+    gap: 8px;
+}
+i.fa-star{
+    color: #faf770;
+}
+i.fa-regular{
+    color: #de6d53;
+}
+.restaurant-profile .tags span{
+    font-size: 1.1rem;
+    padding: 4px 4px;
+    border: 2px solid #fefcf2;
+    border-radius: 12px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.active-card{
+    display: grid;
+    grid-template-columns: 1fr 45px;
+}
+.active-card .restaurant-card{
+    max-width: 100%;
+    position: relative;
+    left: -32%;
+    padding: 16px 2px;
+    background: #db6e51;
+}
+.active-card .contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    position: relative;
+    left: -100%;
+}
+.contact-details i{
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    transition: all .4s ease;
+}
+.contact-details i:hover,
+.contact-details i:active{
+    font-size: 1.2rem;
+}
+.contact-details .order i{
+    color: #6fcc72;
+}
+.contact-details .bookmark i{
+    color: #5fb7f9;
+}
+.contact-details label{
+    font-size: 1.0rem;
+    font-weight: 500;
+}
+.distance{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.distance i{
+    font-size: 2.0rem;
+}
+img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+@media (max-width: 640px){
+    .container{
+        max-width: 100%;
+    }
+    img{
+        max-width: 16%;
+        margin-right: 4px;
+    }
+    .active-card .restaurant-card{
+        padding: 4px 0;
+    }
+    .active-card .restaurant-card img{
+        max-width: 8%;
+    }
+}
