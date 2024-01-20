@@ -1,0 +1,102 @@
+*,
+::after,
+::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 100%;
+    background: #eeeaf9;
+    padding: 16px 16px;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.card{
+    background: #fffefe;
+    padding: 32px 32px;
+    line-height: 2.0rem;
+    border-radius: 16px;
+}
+.card button{
+    width: 100%;
+    padding: 12px 16px;
+    margin-block-start: 48px;
+    border-radius: 8px;
+    font-size: 1.0rem;
+    cursor: pointer;
+    transition: all .6s ease;
+}
+.starter{
+    box-shadow: 0px 0px 2px 10px #dce1f3;
+}
+.starter h2{
+    color: #7a5bc2;
+}
+.starter button{
+    background: transparent;
+    border: 2px solid #aea5c1;
+    color: #7a5bc2;
+}
+.starter button:hover,
+.starter button:active{
+    background: #7a5bc2;
+    color: #ffdbf9;
+}
+.professional{
+    box-shadow: 0px 0px 2px 10px #e7d8ee;
+}
+.professional h2{
+    color: #bf4684;
+}
+.professional button{
+    background: #c5448a;
+    border: none;
+    color: #ffdbf9;
+    transition: all .2s ease;
+}
+.professional button:hover,
+.professional button:active{
+    background: transparent;
+    border: 2px solid #c5448a;
+    color: #4a4a4e;
+}
+.card h2{
+    font-size: 1.4rem;
+}
+.card h3{
+    font-size: 1.1rem;
+    margin-top: -6px;
+    font-weight: 500;
+}
+.card h3 span{
+    font-weight: 900;
+}
+.card ul{
+    margin-block-start: 40px;
+    font-size: 1.1rem;
+}
+.card ul li{
+    padding-left: 1ch;
+}
+.card ul li::marker{
+    content: "\2713";
+    color: #7b985b;
+    font-weight: 700;
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+}
