@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-family: 'Roboto', sans-serif;
+    background: #e8eaf8;
+    color: #0c102c;
+}
+.container{
+    background: #fefffe;
+    padding: 1em;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 12px 4px #e1e0f3;
+}
+.container h1{
+    font-size: 1.5rem;
+    margin-block: 1.2em .3em;
+}
+.container .header-txt{
+    max-width: 240px;
+    margin-inline: auto;
+}
+.card{
+    display: flex;
+    border: 1px solid black;
+    padding: 1em;
+    text-align: left;
+    margin-block: 1em;
+    gap: .6em;
+    line-height: 1.6rem;
+    border-radius: 16px;
+}
+.card h3{
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .06rem;
+}
+.card h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.card p{
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: .04rem;
+}
+.card-2 span{
+    padding: .3em;
+    background: #3140f0;
+    color: #f5fcfe;
+    border-radius: 16px;
+}
+.card-1{
+    border: 3px solid #6b74d4;
+}
+.card-2 {
+    border: 4px solid #e8ebf2;
+}
+input[type = "radio"]{
+    width: 25px;
+    height: auto;
+}
+.container button{
+    margin-block: 1em;
+    background: transparent;
+    border: none;
+    font-size: 1.0rem;
+    cursor: pointer;
+}
+.btn-1{
+    padding: .8em 3.6em;
+    border-radius: 16px;
+    background: #0d1133 !important;
+    color: #fbfffe;
+}
+.container span.payment{
+    cursor: pointer;
+    background: #fefffe;
+    border: 3px solid #ebeaf5;
+    padding: .5em 2em;
+    text-align: center;
+    border-radius: 16px;
+}
+.container a{
+    cursor: pointer;
+    display: block;
+    margin-block: 1em;
+    font-size: 1.1rem;
+}
