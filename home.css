@@ -1,76 +1,69 @@
-*{
-    box-sizing: border-box;
+
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
+*,
+::after,
+::before{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #d4f3f8;
+}
+h1{
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    text-decoration: underline;
+    letter-spacing: .2rem;
+    font-size: 2.2rem;
+    margin-top: .8em;
 }
 .grid-container{
-    background: bisque;
-    width: 100%;
-    height: 100%;
+    padding: 1.2em;
     display: grid;
-    grid-template-columns:repeat(auto-fill, 18%);
-    grid-template-rows: repeat(auto-fill, 1fr );
-    gap: 24px;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    font-family: 'Roboto Slab', serif;
 }
 .project-card{
-    position: relative;
-    left: 16px;
-    margin-top: 24px;
-    background: aliceblue;
-    border-radius: 8px;
-    padding: 24px 16px;
-    box-shadow: 4px 4px 3px 2px gray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: whitesmoke;
+    box-shadow: 0px 4px 8px 1px grey;
+    padding: 1em;
+    border-radius: 16px;
+    line-height: 2rem;
 }
-img{
-    max-width: 16vw;
-    height: auto;
-    border-radius: 4px;
-}
-h2{
-    font-size: 1.3rem;
-    margin-top: 16px;
-    margin-bottom: 8px;
-}
-h3{
-    font-weight: 400;
-    font-size: .9em;
-    margin-bottom: 8px;
-}
-.credits span{
+.project-card span{
     display: flex;
     gap: 8px;
 }
-.credits span h3{
-    font-weight: bold;
-    font-size: 1.0em;
+.project-card span a{
+    font-size: 1.2rem;
 }
-.credits span a{
-    color: blueviolet;
+.project-card button{
     cursor: pointer;
-    font-size: 1.1rem;
-    letter-spacing: .05em;
-    margin-bottom: 24px;
-}
-.credits span a:hover{
-    color: blue;
-}
-button{
-    padding: 12px 32px;
-    align-self: center;
-    border-radius: 4px;
+    width: 100%;
+    padding-block: .5em;
+    border-radius: 8px;
     border: none;
-    background: #e29f0f;
-    font-size: .9em;
-    font-weight: bold;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all .5s ease;
+    font-size: 1.1rem;
+    margin-block: 1em;
+    background: rgb(238, 181, 37);
+    transition: all .1s ease-in;
 }
-button:hover{
-    box-shadow: 2px 2px 3px 2px gray;
+button:hover,
+button:active{
+    background: rgba(238, 181, 37, 0.355);
+    border: 2px solid gold;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 2px grey;
+}
+h3.date{
+    font-family: 'Grape Nuts', cursive;
+    font-size: 1.1rem;
 }
