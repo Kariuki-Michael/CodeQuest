@@ -1,0 +1,102 @@
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 1em .8em;
+    background: linear-gradient(to right, #008fd1, #00b2c3);
+}
+.container{
+    max-width: 300px;
+    margin-inline: auto;
+    background: #fefffe;
+    border-radius: 16px;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+.container header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em .8em;
+    background: #eaeef2;
+    color: #56707d;
+}
+.container header h1{
+    font-size: 1.2rem;
+}
+.container main{
+    padding: 1em;
+    display: grid;
+    gap: 32px;
+}
+main label{
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-left: .2em;
+    color: #0697d9;
+}
+button{
+    padding: .5em 1em;
+    border-radius: 8px;
+    border: none;
+    margin-left: 1.3em;
+    margin-top: .8em;
+    font-size: .9rem;
+    text-transform: uppercase;
+    background: #25b9f5;
+    color: #d7feff;
+}
+p{
+    margin-left: 1.3em;
+    margin-top: .5em;
+}
+h3{
+    margin-left: 1.3em;
+    margin-top: .2em;
+    letter-spacing: .5em;
+}
+.preparation p{
+    background: #edf1f1;
+    padding: .3em .3em;
+}
+.check-in span{
+    display: flex;
+}
+.check-in span p{
+    background: #edf1f1;
+    padding: .3em .3em;
+    border-radius: 50%;
+}
+.line{
+    width: 3px;
+    height: 132px;
+    background: #dde1e0;
+    position: absolute;
+    top: 11%;
+    margin-left: .3em;
+}
+.line-2{
+    width: 3px;
+    height: 106px;
+    background: #dde1e0;
+    position: absolute;
+    top: 29.5%;
+    margin-left: .3em;
+}
+.line-3{
+    width: 3px;
+    height: 98px;
+    background: #dde1e0;
+    position: absolute;
+    top: 46%;
+    margin-left: .3em;
+}
+@media (max-width: 475px){
+    .container{
+        max-width: 100%;
+    }
+}
