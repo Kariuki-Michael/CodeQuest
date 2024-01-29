@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>iCodeThis | Login Screen</title>
+        <meta name="description" content="iCodeThis Login Screen Challenge #029">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="img-bg"></div>
+            <div class="form-group">
+                <form action="#" id="login">
+                    <h1>Log in</h1>
+                    <fieldset class="fieldset">
+                        <label for="email">Email</label>
+                        <input class="txt-field" type="email" name="email" id="email" placeholder="Enter your email address" required>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <label for="password">Password</label>
+                        <input class="txt-field" type="password" name="password" id="password" placeholder="Enter your password" required>
+                    </fieldset>
+                    <fieldset class="fieldset btn-set">
+                        <input type="submit" value="Log In">
+                        <p>Or</p>
+                        <div class="social-btn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <button type="button">Continue With LinkedIn</button>
+                        </div>
+                    </fieldset>
+                    <span id="myBtn" class="links">
+                        <a href="#">Can't log in? </a>
+                        <a href="#" onclick="register()"> - Sign up for an account</a>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 4em .5em;
+    background: #fefbfb;
+    font-family: 'Open Sans', sans-serif;
+}
+.wrapper{
+    max-width: 640px;
+    margin-inline: auto;
+    padding: .6em;
+    background: #fefffe;
+    border-radius: 1em;
+    box-shadow: 0px 5px 16px 8px rgba(255, 212, 236, 0.634);
+    overflow: hidden;
+}
+.wrapper .img-bg{
+    width: 100%;
+    height: 500px;
+    background-image: url(https://images.pexels.com/photos/3371094/pexels-photo-3371094.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+}
+form{
+    display: grid;
+    gap: 1em;
+    padding: 1em;
+    transition: .5s all ease;
+}
+form input{
+    width: 100%;
+    padding: .8em 1em;
+    border-radius: .3em;
+    border: none;
+    outline: none;
+    background: #f1f1f1;
+    font-size: .9rem;
+    cursor: pointer;
+}
+input.txt-field:focus,
+input.txt-field:valid{
+    border: 1.5px solid #6b95c6;
+}
+form h1{
+    font-size: 1.4rem;
+}
+form .fieldset{
+    border: none;
+}
+.fieldset label{
+    font-weight: 600;
+    font-size: .9rem;
+    line-height: 1.8em;
+}
+.btn-set p{
+    margin-block: .8em;
+}
+input[type= "submit"]{
+    background: #a14724;
+    box-shadow: 0px 2px 12px 3px rgba(163, 76, 41, 0.563);
+    color: #faf0e5;
+}
+.social-btn{
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #d9f0fc;
+    background: #0d65c0;
+    box-shadow: 0px 2px 12px 3px rgba(17, 102, 192, 0.34);
+    padding: .4em 1em;
+    border-radius: .3em;
+    text-align: center;
+    margin-right: 8px;
+}
+.social-btn button{
+    cursor: pointer;
+    color: #d9f0fc;
+    font-size: .9rem;
+    background: transparent;
+    border: none;
+}
+.links a{
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #6b95c6;
+    transition: .5s;
+}
+.links a:hover{
+    text-decoration: underline;
+}
+@media(min-width: 700px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 640px){
+    .img-bg{
+        display: none;
+    }
+    .wrapper{
+        background-image: url(https://images.pexels.com/photos/3371094/pexels-photo-3371094.jpeg?auto=compress&cs=tinysrgb&w=600);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-width: 100%;
+    }
+    form{
+        background: rgba(206, 228, 248, 0.627);
+        border-radius: .8em;
+        height: 100%;
+    }
+}
