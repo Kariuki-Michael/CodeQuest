@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*,
+::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 1em;
+    background: #fdfdfe;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.container{
+    max-width: 380px;
+    margin-inline: auto;
+    padding: 1em;
+    background: #fffefe;
+    border-radius: 8px;
+    box-shadow: -1px 2px 12px 8px #f2f2ff;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+header h1{
+    font-size: 1.5rem;
+    max-width: 120px;
+}
+header i{
+    font-size: 1.2rem;
+    margin-block: auto;
+    border: 1.3px solid #e4e4e5;
+    border-radius: 50%;
+    padding: .2em;
+}
+.card{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-block: 16px;
+}
+img {
+    max-width: 32%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 1px 1px 2px 1px gray;
+}
+.card h2{
+    font-size: .9rem;
+}
+.card span p{
+    font-size: .8rem;
+    display: inline;
+    font-weight: 400;
+}
+.card i{
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    padding: .2em;
+    background: #222347;
+    color: #fbfffe;
+    margin-left: 8px;
+    box-shadow: 0px 0px 2px 4px #e6e6ef;
+}
+.active-card{
+    background: #fdfdfe;
+    border: 2px solid #faf8ff;
+    padding: .4em;
+    border-radius: 8px;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-start: 32px;
+    margin-block-end: 24px;
+}
+.btn i{
+    color: #b24364;
+    background: #ffecf4;
+    border-radius: 50%;
+    padding: .2em;
+}
+.btn button{
+    background: transparent;
+    border: none;
+    font-size: .9rem;
+    color: #b24364;
+}
+button.btn-2{
+    padding: .6em 2.4em;
+    border-radius: 4px;
+    border: none;
+    font-weight: 600;
+    color: #fff5fe;
+    background: linear-gradient(to right, #c484f2, #f46fa6);
+}
+@media (max-width: 475px){
+    body{
+        padding: .8em;
+    }
+    .container{
+        max-width: 100%;
+    }
+    img{
+        max-width: 28%;
+    }
+    .card span p{
+        font-size: .6rem;
+        font-weight: 600;
+    }
+}
