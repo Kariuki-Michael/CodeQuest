@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    background: #f6f7fe;
+}
+.container{
+    max-width: 500px;
+    margin-inline: auto;
+    padding: 1em;
+}
+.notification-icon{
+    text-align: right;
+}
+.fa-bell{
+    font-size: 2rem;
+    background: #0c0e3f;
+    color: aliceblue;
+    padding: .4em;
+    border-radius: 50%;
+}
+.card{
+    margin-top: 1em;
+    padding: 1.2em;
+    border-radius: .5em;
+    box-shadow: 0px 3px 4px 2px #e5e7f3;
+    background: #fefeff;
+}
+.card h1{
+    font-size: 1.2rem;
+}
+.card .txt-wrap{
+    display: flex;
+    gap: .8em;
+    align-items: center;
+    margin-top: 1em;
+}
+.txt-wrap i.fa-envelope{
+    font-size: 2rem;
+    background: #ffeaf3;
+    color: #bb4974;
+    padding: .4em;
+    border-radius: .2em;
+}
+.txt-wrap .txt h2{
+    font-size: 1.0rem;
+    line-height: 1.6em;
+}
+.txt-wrap .txt p{
+    font-weight: 600;
+    text-wrap: nowrap;
+    font-size: .8rem;
+}
+.btn-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8em;
+    font-size: 1.3rem;
+    margin-top: 1em;
+}
+.twitter-btn,
+.fb-btn{
+    padding: .3em 1.2em;
+    border-radius: 1.2em;
+}
+.twitter-btn{
+    border: 2px solid #377da3;
+    color: #377da3;
+}
+.twitter-btn button{
+    color: #377da3;
+}
+.fb-btn{
+    border: 2px solid #26507d;
+    color: #26507d;
+}
+.fb-btn button{
+    color: #26507d;
+}
+button{
+    border: none;
+    background: transparent;
+    font-size: 1.0rem;
+    font-weight: 600;
+}
