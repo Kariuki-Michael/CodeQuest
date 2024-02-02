@@ -1,0 +1,121 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@400;500;600&display=swap');
+*,
+::after,
+::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom right, #d9cbc8, #cfbeba, #b59e96);
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    background: #ede8e2;
+    max-width: 360px;
+    margin-inline: auto;
+    padding: 1em 1.6em;
+    border-radius: .8em;
+    box-shadow: -2.8em -2.4em 2px 8px #c4afa8;
+    color: #1d150e;
+}
+.container header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1.2em;
+}
+.container header h2{
+    font-size: .95rem;
+    text-transform: uppercase;
+}
+.container header i{
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: .1em;
+    border-radius: 50%;
+    transition: all .7s ease;
+}
+.container header i:hover{
+    border: 1px solid #242321;
+}
+.container .content h1{
+    font-size: 1.5rem;
+    padding-bottom: .4em;
+}
+.container .content p{
+    text-wrap: balance;
+    font-size: 1.0rem;
+    padding-bottom: .5em;
+    line-height: 1.2em;
+}
+.container .content .community{
+    display: flex;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+.community h3{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.community label{
+    font-weight: 500;
+    font-size: .93rem;
+}
+.container .content .btn{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding-bottom: .8em;
+}
+.container .content .btn button{
+    cursor: pointer;
+    width: 12em;
+    padding-block: .8em;
+    font-size: .9rem;
+    border-radius: .8em;
+    transition: all .7s ease;
+}
+button.join{
+    background: transparent;
+    border: 2px solid #242321;
+}
+button.join:hover{
+    background: #242321;
+    color: #fbf7f5;
+    border: none;
+}
+button.create{
+    background: #1f1413;
+    color: #fbf7f5;
+    border: none;
+}
+button.create:hover{
+    background: transparent;
+    color: #1d150e;
+    border: 2px solid #242321;
+    font-weight: 500;
+}
+footer p{
+    color: #57524c;
+    font-size: .9rem;
+}
+@media (max-width: 475px){
+    body{
+        padding: .8em;
+    }
+    .container{
+        max-width: 100%;
+    }
+    .container .content .btn{
+        display: flex;
+        flex-direction: column;
+    }
+    .container .content .btn button{
+        width: 100%;
+    }
+}
