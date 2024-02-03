@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root{
+    --h1-font: 'Merriweather', serif;
+    --body-font: 'Poppins', sans-serif;
+}
+
+*,
+::after,
+::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    padding: 1em;
+    background: #f3f7fe;
+}
+.container{
+    max-width: 750px;
+    padding: 1em;
+    margin-inline: auto;
+}
+.container h1{
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: var(--h1-font);
+    margin-bottom: .8em;
+}
+.container p{
+    text-align: center;
+    display: block;
+    margin-inline: auto;
+    color: #707283;
+    margin-top: 2em;
+    max-width: 96%;
+    font-family: var(--body-font);
+    font-size: .8rem;
+    line-height: 1.4em;
+}
+.container ul li{
+    list-style: none;
+}
+ul.grid-wrap{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    text-align: center;
+    gap: 1.4em;
+}
+li.card{
+    box-shadow: 0 6px 7px 4px #dde3ee;
+    border-radius: 1em;
+    padding: 1.6em 1em;
+    background: #fffefe;
+}
+li.card span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    padding-top: 1.6em;
+    margin-bottom: 2em;
+}
+li.card span i{
+    color: #272950;
+    font-size: 1.6rem;
+    width: 2em;
+    padding-block: .5em;
+    border-radius: .3em;
+}
+li:nth-child(1) i{
+    background: linear-gradient(to bottom right, #c2cdfb, #e2d2ff);
+}
+li:nth-child(2) i{
+    background: #feced5;
+}
+li:nth-child(3) i{
+    background: linear-gradient(to bottom right, #c4e9fc, #e6d7fe);
+}
+li:nth-child(4) i{
+    background: linear-gradient(to bottom right, #c1f5ea, #cee4fa);
+}
+li:nth-child(5) i{
+    background: linear-gradient(to bottom right, #bfd9f9, #f1d7dc);
+}
+li:nth-child(6) i{
+    background: linear-gradient(to bottom right, #f7dfce, #dedaf1);
+}
+li.card span h2{
+    font-family: var(--body-font);
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+li.card button{
+    width: 100%;
+    font-family: var(--body-font);
+    font-weight: 500;
+    font-size: 1.0rem;
+    padding-block: .5em;
+    border-radius: .4em;
+    border: 2px solid #cbcbd6;
+    background: #fffefe;
+    cursor: pointer;
+}
+li.card button:hover,
+li.card button:active{
+    background: #1e2247;
+    color: #f8feff;
+    border-color: transparent;
+}
+button.active-btn{
+    background: #1e2247 !important;
+    border-color: transparent !important;
+    color: #f8feff;
+}
+@media (min-width: 758px){
+    body{
+        display: flex;
+        align-items: center;
+    }
+}
+@media (max-width: 640px){
+    body{
+        padding: .5em;
+    }
+    .container{
+        max-width: 100%;
+        padding: .5em;
+    }
+    .container p{
+        width: 100%;
+    }
+}
