@@ -1,0 +1,214 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(https://i.ibb.co/C0QChfr/blob-haikei.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: .5em;
+    max-width: 100%;
+    min-height: 100vh;
+}
+.container .icon-wrapper{
+    max-width: 370px;
+    margin-inline: auto;
+    padding: 1.2em .8em;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .8em;
+    background: #fefeff;
+    box-shadow: 1px 2px 7px 2px #fde3e7;
+}
+.icon-wrapper span{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.icon-wrapper span i{
+    font-size: 1.8rem;
+    text-align: center;
+}
+.icon-wrapper span.active-icon i{
+    background: #ed4b57;
+    color: #fcdeed;
+    width: 1.8em;
+    padding-block: .4em;
+    border-radius: 50%;
+}
+.icon-wrapper span label{
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: 2em;
+}
+.flex-container{
+    display: flex;
+    gap: 6em;
+    margin-top: 3.2em;
+}
+.flex-container .left-container .frequents{
+    max-width: 380px;
+    padding: 1em;
+    border-radius: .8em;
+    margin-bottom: 3.2em;
+    background: #ec4b5b;
+    box-shadow: 1px 2px 7px 2px #fde3e7;
+}
+.frequents header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fedadf;
+}
+.frequents header h2{
+    font-size: 1.1rem;
+    line-height: 2.7em;
+}
+.frequents header i{
+    font-size: 1.6rem;
+}
+.frequents .image-container{
+    display: flex;
+    justify-content: center;
+    gap: 1.3em;
+}
+.left-container .slider{
+    background: #fefeff;
+    box-shadow: 1px 2px 7px 2px #fde3e7;
+    max-width: 380px;
+    border-radius: .8em;
+    padding: 1em;
+    position: relative;
+    left: 3em;
+}
+.slider p{
+    text-align: center;
+    font-size: .9rem;
+}
+.slider .icon-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .8em;
+    color: #ce5d69;
+}
+.slider .icon-container i{
+    border: 1px solid #eedbdf;
+    padding: .3em 1.2em;
+    font-size: 1.3rem;
+    border-radius: 1em;
+}
+.slider ul.pagination{
+    list-style: none;
+}
+ul.pagination li{
+    background: #ce5d69;
+    width: .4em;
+    height: .4em;
+    border-radius: 50%;
+    display: inline-block;
+}
+.grid-container{
+    max-width: 380px;
+    position: relative;
+    top: 3em;
+}
+.grid-container ul.profile-list{
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    justify-content: center;
+    background: #fefeff;
+    box-shadow: 1px 2px 7px 2px #fde3e7;
+    border-radius: 1em;
+    padding: .5em;
+}
+.grid-container ul li{
+    list-style: none;
+}
+.grid-container ul.profile-list{
+    text-align: center;
+}
+ul.profile-list header{
+    text-align: right;
+    font-size: 1.3rem;
+    color: #96949a;
+}
+ul.profile-list h3{
+    font-size: .9rem;
+}
+ul.profile-list p{
+    font-size: .8rem;
+    color: #6c7175;
+    font-weight: 500;
+}
+ul.profile-list button{
+    padding: .4em 1em;
+    border: none;
+    border-radius: 1em;
+    margin-block: .4em .8em;
+    background: #e9495f;
+    color: #f6c8d0;
+}
+img{
+    width: 4em;
+    height: 4em;
+    object-fit: cover;
+    border-radius: 50%;
+    border: .3em solid #f88a9b;
+}
+@media (min-width: 768px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media(max-width: 640px){
+    body{
+        background-image: url(https://i.ibb.co/NY0v49w/blob-haikei-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container{
+        max-width: 100%;
+    }
+    .left-container .slider{
+        max-width: 100%;
+        left: 0;
+    }
+    .grid-container{
+        max-width: 100%;
+        top: 0;
+    }
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .flex-container .left-container .frequents{
+        max-width: 100%;
+    }
+    .container .icon-wrapper{
+        max-width: 100%;
+    }
+}
+@media (max-width: 475px){
+    .container .icon-wrapper{
+        max-width: 100%;
+    }
+    .grid-container ul.profile-list{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1em;
+    }
+    .frequents .image-container img{
+        width: 3.6em;
+        height: 3.6em;
+    }
+}
