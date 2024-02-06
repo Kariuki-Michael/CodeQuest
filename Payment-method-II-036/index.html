@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>iCodeThis | Payment Method II</title>
+        <meta name="description" content="iCodeThis Payment Method 2 challenge #036">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Payment</h1>
+            <form action="#">
+                <fieldset class="card">
+                    <input type="radio" name="option" id="card">
+                    <label for="card">Card</label>
+                    <p>Pay with a card</p>
+                    <div class="input-box">
+                        <span class="card-number">
+                            <i class="fa-regular fa-credit-card"></i>
+                            <input type="text" name="" id="" placeholder="Card number">
+                        </span>
+                        <span class="card-mm">
+                            <i class="fa-regular fa-credit-card"></i>
+                            <input type="text" name="" id="" placeholder="mm/dd">
+                        </span>
+                        <span class="card-cvc">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="text" name="" id="" placeholder="CVC">
+                        </span>
+                    </div>
+                    <span class="memory">
+                        <input type="checkbox" name="" id="memory">
+                        <label for="memory">Remember my card</label>
+                    </span>
+                </fieldset>
+                <fieldset class="loan">
+                    <input type="radio" name="option" id="loan">
+                    <label for="loan">Get first. Pay later.</label>
+                    <p>Pay within 30 days</p>
+                </fieldset>
+                <input type="submit" value="CONTINUE">
+            </form>
+        </div>
+    </body>
+</html>

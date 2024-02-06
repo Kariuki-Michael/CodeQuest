@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap');
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: .5em;
+    background: #dfdef1;
+    font-family: 'Nunito', sans-serif;
+}
+.container{
+    max-width: 400px;
+    background: #fefeff;
+    box-shadow: 2px 3px 12px 6px #d6d9ef;
+    padding: 1em;
+    border-radius: 1em;
+}
+.container h1{
+    color: #28346d;
+    font-size: 1.6rem;
+    margin-top: 1em;
+}
+label{
+    color: #2b326a;
+    font-weight: 600;
+    font-size: 1.1rem;
+    vertical-align: middle;
+    margin-left: .2em;
+}
+p{
+    font-size: 1.1rem;
+    margin-block: .6em;
+    position: relative;
+    left: 1.6em;
+    color: #404360;
+}
+.card, .loan{
+    border: none;
+    width: 100%;
+    margin-block: 1.2em;
+}
+input[type = 'radio']{
+    display: inline-block;
+    vertical-align: middle;
+    appearance: none;
+    font-size: 1.6rem;
+    width: 1.2em;
+    height: 1.2em;
+    border: 2px solid #888fa0;
+    border-radius: 50%;
+}
+input[type="radio"]:checked{
+    background: #fffcfc;
+    border: 5px solid #293378;
+}
+input[type="submit"]{
+    cursor: pointer;
+    background: #29327d;
+    color: #f2fcfc;
+    width: 100%;
+    padding-block: 1.4em;
+    font-weight: 600;
+    border-radius: .5em;
+    border-color: transparent;
+    margin-block: 1.4em 1.2em;
+}
+input[type="submit"]:hover{
+    background: #f2fcfc;
+    border-color: #293378;
+    color: #404360;
+}
+input[type = 'checkbox']{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    width: 1em;
+    height: 1em;
+    border-radius: .2em;
+}
+.input-box{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 100%;
+    margin-left: 1.6em;
+    margin-bottom: .9em;
+    border-radius: .5em;
+    border: 1px solid #aca8cc;
+    overflow: hidden;
+}
+.input-box .card-number{
+    grid-column:  1 / -1;
+}
+.input-box .card-mm{
+    grid-column: span 6;
+}
+.input-box .card-cvc{
+    grid-column: span 6;
+}
+.input-box span{
+    padding: .6em 1.2em;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.input-box span i{
+    font-size: 1.3rem;
+    padding-right: .2em;
+    color: #3a4579;
+}
+.input-box span input{
+    background: transparent;
+    padding: .2em .3em;
+    font-size: 1.0rem;
+    border: none;
+    outline: none;
+    max-width: 100%;
+}
+.card .memory{
+    margin-left: 1.6em;
+}
+.card .memory label{
+    font-weight: 400;
+    color: #404360;
+}
+@media (min-width: 500px){
+    body{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width: 475px){
+    .input-box{
+        margin-left: 0;
+    }
+    .card .memory{
+        margin-left: 0;
+    }
+    p{
+        left: 0;
+    }
+}
