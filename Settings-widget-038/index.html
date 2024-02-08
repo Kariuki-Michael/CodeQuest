@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>iCodeThis | Settings Widget</title>
+        <meta name="description" content="iCodeThis Settings Widget Challenge #038">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <section class="menu-header">
+                <header>
+                    <i class="fa-solid fa-ellipsis"></i>
+                    <ul class="menu-items">
+                        <li> Edit your list</li>
+                        <li class="active-menu">Account settings</li>
+                        <li>View your profile</li>
+                    </ul>
+                </header>
+            </section>
+            <section class="custom">
+                <div class="radio-wrap">
+                    <h2>Customize your widget</h2>
+                    <span>
+                        <input type="radio" name="customization" id="display">
+                        <label for="display">Display Contact button</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="customization" id="hide">
+                        <label for="hide">Hide email address</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="customization" id="publish">
+                        <label for="publish">Display Publish button</label>
+                    </span>
+                    <div class="btn-wrap">
+                        <button type="submit" class="cancel">Cancel</button>
+                        <button type="submit" class="save">Save</button>
+                    </div>
+                </div>
+                <div class="chkbox-wrap">
+                    <h2>Other</h2>
+                    <span>
+                        <input type="checkbox" name="other" id="notifications">
+                        <label for="notifications">Turn on in-app notifications</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="other" id="newsletter">
+                        <label for="newsletter">Receive weekly newsletters and other offers</label>
+                    </span>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
