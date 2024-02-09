@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0.5em;
+  font-family: "Merriweather", serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #d7e2ee;
+  color: #433d5a;
+}
+
+.container {
+  max-width: 768px;
+  margin-inline: auto;
+  padding: 0.5em;
+}
+.container .profile .profile-card,
+.container .menu .permissions,
+.container .menu .icon-wrap i {
+  background: #ffffff;
+  box-shadow: -1px 3px 8px 4px #9ea8b0;
+}
+
+.container .profile .profile-card {
+  margin-inline: auto;
+  max-width: 200px;
+  border-radius: 0.8em;
+  padding: 1em;
+  text-align: center;
+  margin-bottom: 4em;
+}
+.container .profile .profile-card img {
+  width: 7em;
+  height: 7em;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  bottom: 5em;
+  margin-bottom: -5em;
+}
+.container .profile .profile-card p.role {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 0.4em;
+}
+.container .menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8em;
+}
+.container .menu .permissions {
+  max-width: 300px;
+  border-radius: 0.8em;
+  padding: 0.8em;
+}
+.container .menu .permissions .header {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.8em;
+}
+.container .menu .permissions .header i {
+  font-size: 1.3rem;
+}
+.container .menu .permissions .header h2,
+.container .profile .profile-card h2 {
+  font-size: 1.1rem;
+}
+.container .menu .permissions .content {
+  padding-inline: 1.6em;
+}
+.content label p {
+  border: 2px solid #dfe5eb;
+  padding: 0.4em;
+  text-align: center;
+  margin-block: 0.8em;
+}
+.content label p span {
+  font-weight: 700;
+}
+.container .menu .permissions .content p {
+  font-size: 0.8rem;
+  margin-block: 0.8em;
+}
+.container .menu .permissions .content button {
+  cursor: pointer;
+  background: #2c2557;
+  color: #f0eef6;
+  width: 100%;
+  padding-block: 0.6em;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.5em;
+  margin-block: 1em;
+}
+.menu .icon-wrap {
+  position: relative;
+  bottom: 3em;
+  max-width: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background: #e6eff6;
+  padding: 1em;
+  border-radius: 6em;
+}
+.container .menu .icon-wrap i {
+  cursor: pointer;
+  display: block;
+  font-size: 1.6rem;
+  text-align: center;
+  border-radius: 50%;
+  width: 2em;
+  padding-block: 0.5em;
+}
+i.notification::after {
+  content: "2";
+  background: gold;
+  position: absolute;
+  top: 11.5em;
+  font-size: 0.5em;
+  padding: 0.3em;
+  border-radius: 50%;
+}
+@media (max-width: 640px) {
+  .container {
+    max-width: 100%;
+  }
+  .container .profile .profile-card {
+    position: relative;
+    top: 4em;
+  }
+  .container .menu {
+    gap: 4em;
+  }
+  .container .menu .permissions {
+    margin-inline: auto;
+    margin-top: 1.6em;
+  }
+  .menu .icon-wrap {
+    margin-inline: auto;
+    flex-direction: row;
+    max-width: 100%;
+  }
+  i.notification::after {
+    content: "2";
+    background: gold;
+    position: absolute;
+    top: 1em;
+    font-size: 0.5em;
+    padding: 0.3em;
+    border-radius: 50%;
+  }
+}

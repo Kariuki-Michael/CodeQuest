@@ -1,0 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root{
+    --ff-meriweather: 'Merriweather', serif;
+    --ff-lato: 'Lato', sans-serif;
+}
+body{
+    background: #f5f9fe;
+    color: #242d51;
+}
+.container{
+    display: grid;
+    place-items: center;
+}
+.card-1{
+    position: relative;
+    top: 8%;
+    left: -8%;
+    width: 360px;
+    height: 400px;
+    background: linear-gradient(to bottom left, #3fdfa9, #3edfd3 );
+    border-radius: 16px;
+    z-index: -99;
+}
+.inbox-card{
+    position: relative;
+    top: -60%;
+    max-width: 360px;
+    padding: .8em;
+    border-radius: 16px;
+    box-shadow: 0px 18px 18px 4px #3edfd46a;
+    background: #fefffe;
+}
+.inbox-card h1{
+    text-align: left;
+    font-size: 1.2rem;
+    font-family: var(--ff-meriweather);
+}
+.inbox-card .btn{
+    cursor: pointer;
+    background: #1e2455;
+    color: #e6ebfd;
+    padding: .8em 1em;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.inbox-card .btn button{
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: var(--ff-lato);
+    font-weight: 400;
+    color: #e6ebfd;
+    background: transparent;
+    border: none;
+}
+.chat-card{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .4em;
+    border-radius: 8px;
+    padding: .4em;
+    margin-block: .8em;
+}
+.active-card{
+    background: #f5f9fe;
+}
+.profile-img{
+    display: flex;
+    flex-direction: row-reverse;
+}
+img{
+    width: 3em;
+    height: 3em;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.badge{
+    width: .7em;
+    height: .7em;
+    border-radius: 50%;
+    background: #000;
+    position: relative;
+    left: -16px;
+    top: -3px;
+    box-shadow: 0px 0px 2px 3px whitesmoke;
+}
+.badge-1{
+    background: #3fdda2;
+}
+.badge-2{
+    background: #de783d;
+}
+.badge-3{
+    background: #41dda3;
+}
+.badge-4{
+    background: #cad3d0;
+}
+.chat-card .chat-content h2{
+    font-family: var(--ff-lato);
+    font-size: .85rem;
+    font-family: 700;
+    margin-top: .6em;
+    margin-bottom: -.7em;
+}
+.chat-content{
+    text-align: left;
+    display: grid;
+    justify-items: start;
+}
+.chat-content .message{
+    font-family: var(--ff-lato);
+    font-size: .82rem;
+    font-weight: 700;
+}
+.chat-card .time{
+    margin-top: -3.0em;
+    font-family: var(--ff-lato);
+    font-weight: 700;
+    font-size: .7rem;
+    margin-left: auto;
+    color: #838592;
+}
+@media(max-width: 475px){
+    .card-1{
+        max-width: 100%;
+        left: 0;
+    }
+    .inbox-card{
+        max-width: 100%;
+    }
+}
