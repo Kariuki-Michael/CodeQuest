@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>iCodeThis | Restaurant Ui</title>
+    <meta name="description" content="iCodeThis Restaurant Ui Challenge #025" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <section class="restaurants">
+        <div class="card">
+          <h1>Restaurants</h1>
+          <div class="restaurant-profile">
+            <img
+              src="https://images.pexels.com/photos/5490920/pexels-photo-5490920.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt=""
+            />
+            <div class="details">
+              <h2 class="name">Clarchens Ballhaus</h2>
+              <span class="wrapper">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Clarchens Ballhaus Augustrabe 24 10117 Berlin</p>
+              </span>
+              <span class="wrapper">
+                <i class="fa-regular fa-clock"></i>
+                <p><span>Open Now - </span>Closes at 2:00 am</p>
+              </span>
+            </div>
+            <span class="ratings">
+              <i class="fa-solid fa-star"></i>
+              <p>4.5</p>
+            </span>
+          </div>
+        </div>
+        <button>Reserve a Table</button>
+      </section>
+      <section class="reservation">
+        <div class="people">
+          <form>
+            <span>
+              <div class="label-qty">
+                <i class="fa-solid fa-users"></i>
+                <input type="text" name="display" readonly />
+              </div>
+              <i class="fa-solid fa-chevron-up"></i>
+            </span>
+            <div class="btn-wrap">
+              <button
+                type="button"
+                value="2"
+                onclick="display.value = '2' + ' people'"
+              >
+                2
+              </button>
+              <button
+                type="button"
+                value="3"
+                onclick="display.value = '3' + ' people'"
+              >
+                3
+              </button>
+              <button
+                type="button"
+                value="4"
+                onclick="display.value = '4' + ' people'"
+              >
+                4
+              </button>
+              <button
+                type="button"
+                value="5"
+                onclick="display.value = '5' + ' people'"
+              >
+                5
+              </button>
+              <button
+                type="button"
+                value="6"
+                onclick="display.value = '6' + ' people'"
+              >
+                6
+              </button>
+              <button
+                type="button"
+                value="7"
+                onclick="display.value = '7' + ' people'"
+              >
+                7
+              </button>
+              <button
+                type="button"
+                value="8"
+                onclick="display.value = '8' + ' people'"
+              >
+                8
+              </button>
+              <button
+                type="button"
+                value="9"
+                onclick="display.value = '9' + ' people'"
+              >
+                9
+              </button>
+              <button
+                type="button"
+                value="10"
+                onclick="display.value = '10' + ' people'"
+              >
+                10
+              </button>
+              <button
+                type="button"
+                value="11"
+                onclick="display.value = '11' + ' people'"
+              >
+                11
+              </button>
+              <button
+                type="button"
+                value="12"
+                onclick="display.value = '12' + ' people'"
+              >
+                12
+              </button>
+              <button
+                type="button"
+                value="13"
+                onclick="display.value = '13' + ' people'"
+              >
+                13
+              </button>
+              <button
+                type="button"
+                value="14"
+                onclick="display.value = '14' + ' people'"
+              >
+                14
+              </button>
+              <button
+                type="button"
+                value="15"
+                onclick="display.value = '15' + ' people'"
+              >
+                15
+              </button>
+              <button
+                type="button"
+                value="16"
+                onclick="display.value = '16' + ' people'"
+              >
+                16
+              </button>
+              <button
+                type="button"
+                value="17"
+                onclick="display.value = '17' + ' people'"
+              >
+                17
+              </button>
+              <button
+                type="button"
+                value="18"
+                onclick="display.value = '18' + ' people'"
+              >
+                18
+              </button>
+              <button
+                type="button"
+                value="19"
+                onclick="display.value = '19' + ' people'"
+              >
+                19
+              </button>
+              <button
+                type="button"
+                value="20"
+                onclick="display.value = '20' + ' people'"
+              >
+                20
+              </button>
+            </div>
+          </form>
+          <a href="#">More than 20 people?</a>
+        </div>
+        <div class="time">
+          <span>
+            <i class="fa-regular fa-clock"></i>
+            <label>Choose a time</label>
+          </span>
+          <div class="time-wrap">
+            <label>8:00 pm</label>
+            <label class="active-time">8:30 pm</label>
+            <label>9:00 pm</label>
+            <label>9:30 pm</label>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap");
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #f6f7f7;
+  padding: 0.5em;
+  font-family: "Fira Sans", sans-serif;
+}
+.container {
+  max-width: 980px;
+  margin-inline: auto;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+.card,
+.people,
+.time {
+  background: #212025;
+  color: #f4f6f6;
+  box-shadow: 2px 4px 12px 3px #aaabaa;
+}
+.restaurants,
+.reservation {
+  flex: 1;
+}
+.restaurants .card {
+  max-width: 475px;
+  padding: 0.8em;
+  border-radius: 0.8em;
+  border: 1px solid black;
+}
+.restaurants .card h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.4em;
+}
+.restaurants .card .restaurant-profile {
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 0.8em;
+  border-radius: 0.8em;
+}
+.restaurants .card .restaurant-profile img {
+  width: 7em;
+  height: 7em;
+  object-fit: cover;
+  border-radius: 0.4em;
+  box-shadow: 1px 2px 8px 2px grey;
+}
+.restaurant-profile .details {
+  margin-block: auto;
+  text-align: left;
+}
+.restaurant-profile .details h2 {
+  color: #232527;
+  font-size: 1.2rem;
+  margin-bottom: 0.4em;
+}
+.restaurant-profile .details p {
+  color: #222325;
+  font-weight: 300;
+  font-size: 0.9rem;
+  text-align: left;
+}
+.restaurant-profile .details p span {
+  font-weight: 600;
+}
+.restaurant-profile .details span.wrapper {
+  margin-block: 0.4em;
+}
+.restaurant-profile .details span.wrapper,
+.restaurant-profile span.ratings {
+  display: flex;
+  gap: 0.5em;
+}
+.reservation .people span i,
+.reservation .time span i,
+.restaurant-profile .details span.wrapper i,
+.restaurant-profile span.ratings i {
+  font-size: 1.3rem;
+}
+.restaurant-profile .details span.wrapper i,
+.reservation .time span i,
+.reservation .people span i.fa-chevron-up {
+  color: #feaa00;
+}
+.restaurant-profile span.ratings i {
+  color: #8a9fe4;
+}
+.restaurant-profile span.ratings {
+  color: #222325;
+}
+.restaurants button {
+  cursor: pointer;
+  display: block;
+  margin-top: 2em;
+  margin-left: auto;
+  background: #ffb306;
+  color: #feffdd;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8em 4em;
+  border-radius: 1.6em;
+  border: 1px solid transparent;
+}
+.reservation .people {
+  max-width: 420px;
+  border-radius: 0.8em;
+  overflow: hidden;
+  border: 1px solid black;
+  padding-bottom: 1em;
+}
+.reservation .people span input {
+  font-size: 1.04rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #d2d5d8;
+}
+.reservation .time span,
+.reservation .people span {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  color: #d2d5d8;
+  border-bottom: 2px solid #d2d5d8;
+  max-width: 100%;
+  padding: 1em;
+}
+.reservation .people span {
+  justify-content: space-between;
+}
+.reservation .people span i {
+  margin-right: 0.2em;
+}
+.reservation .time span label {
+  font-size: 1.04rem;
+  font-weight: 300;
+}
+.reservation .people .btn-wrap {
+  margin-top: 1.2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3em, 1fr));
+  row-gap: 0.8em;
+  justify-items: center;
+  padding: 1em;
+}
+.reservation .people .btn-wrap button {
+  cursor: pointer;
+  width: 3em;
+  padding-block: 1em;
+  background: transparent;
+  color: #e3e5e9;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.reservation .people .btn-wrap button:hover,
+.reservation .people .btn-wrap button:active {
+  background: #feb301;
+  font-weight: 600;
+}
+.reservation .people a {
+  text-decoration: none;
+  padding-left: 1.6em;
+  font-size: 1rem;
+  color: #feb301;
+}
+.reservation .people a:hover,
+.reservation .people a:active {
+  color: wheat;
+}
+.reservation .time {
+  position: relative;
+  right: 2em;
+  max-width: 420px;
+  border-radius: 0.8em;
+  overflow: hidden;
+  border: 1px solid black;
+  padding-bottom: 1em;
+  margin-top: 2em;
+}
+.reservation .time .time-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+  gap: 1.6em;
+  padding: 1em;
+}
+.reservation .time .time-wrap label {
+  cursor: pointer;
+  padding-block: 0.6em;
+  text-align: center;
+  border-radius: 3em;
+}
+.reservation .time .time-wrap label:hover,
+.reservation .time .time-wrap label:active {
+  background: #feb301;
+  font-weight: 600;
+}
+.reservation .time .time-wrap label.active-time {
+  background: #feb301;
+  font-weight: 600;
+}
+@media (max-width: 640px) {
+  .container {
+    max-width: 100%;
+  }
+  .reservation .time {
+    right: 0;
+  }
+  .restaurants,
+  .reservation {
+    flex: 100%;
+  }
+  .restaurants .card .restaurant-profile {
+    flex-direction: column;
+  }
+  .restaurants .card .restaurant-profile img {
+    width: 100%;
+    height: 12em;
+  }
+}
+
+@media (max-width: 475px) {
+  .container {
+    max-width: 100%;
+    padding: 0.2em;
+  }
+  .restaurants .card {
+    max-width: 100%;
+  }
+  .reservation .people {
+    max-width: 100%;
+  }
+  .reservation .time {
+    max-width: 100%;
+  }
+  .restaurants button {
+    width: 100%;
+  }
+}

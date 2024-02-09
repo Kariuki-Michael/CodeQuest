@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 0.5em;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #e9e9e9;
+  font-family: 'Inter', sans-serif;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 980px;
+  margin-inline: auto;
+  box-shadow: 1px 8px 12px 8px #d8d9d9;
+}
+.container header {
+  min-height: 100%;
+  background: #223745;
+  padding: 1em;
+}
+.container ul.nav-bar {
+  display: grid;
+  gap: 2em;
+  padding-top: 1em;
+}
+.container header ul li {
+  list-style: none;
+  font-size: 1rem;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: center;
+}
+.container header ul li a {
+  color: #f5fffe;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.container header ul li a:hover::after,
+.container header ul li a:active::after {
+  content: " ";
+  display: block;
+  background: #fbfeff;
+  width: 0.2em;
+}
+.container .page-content {
+  background: #ffffff;
+  flex: 1 1 0;
+  padding-block: 2em;
+}
+main .content-header {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 2em;
+}
+main .content-header h1 {
+  font-family: 'Honk', system-ui;
+  font-size: 2.8rem;
+}
+main .content-header img {
+  width: 2.4em;
+  height: auto;
+  object-fit: contain;
+}
+main .hero-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5em;
+}
+.hero-section .hero-text {
+  color: #1f3644;
+  flex: 14%;
+  padding: 1.6em;
+  display: grid;
+  gap: 3.2em;
+}
+.hero-section .hero-text button {
+  cursor: pointer;
+  color: #29363e;
+  padding: 0.9em 1.4em;
+  font-size: 1rem;
+  background: transparent;
+  border: 2px solid #29363e;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+}
+.hero-section .hero-text button:hover {
+  border-color: transparent;
+  background: #29363e;
+  color: #d8d9d9;
+}
+.hero-section .hero-text h1 {
+  font-size: 2.8em;
+  font-weight: 700;
+  max-width: 180px;
+}
+.splide {
+  flex: 60%;
+  max-width: 600px;
+}
+.splide .splide__pagination {
+  position: absolute;
+  bottom: -1em;
+}
+.splide .splide__slide {
+  max-width: 100%;
+  padding: 1em;
+  margin-block: auto;
+}
+.splide .splide__slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8em;
+  padding: 1em;
+  margin-top: 1em;
+}
+footer .testimonials {
+  color: #1f3644;
+  flex: 1;
+  max-width: 240px;
+  text-align: left;
+}
+footer .testimonials p {
+  font-size: 0.8rem;
+  line-height: 1.3em;
+}
+footer .testimonials h3 {
+  margin-top: 0.3em;
+  font-size: 0.9rem;
+}
+footer .working-hours {
+  color: #1f3644;
+  background: #f5f6f7;
+  flex: 1;
+}
+footer .working-hours h2 {
+  font-size: 1.4rem;
+  position: relative;
+  bottom: 0.6em;
+}
+footer .working-hours ul {
+  padding: 0.5em;
+  display: flex;
+  gap: 4em;
+}
+footer .working-hours ul li {
+  list-style: none;
+  line-height: 1.5em;
+}
+footer .working-hours ul li p {
+  font-size: 0.9rem;
+}
+footer .working-hours ul li p.days {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+  .hero-section .hero-text h1 {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+  .hero-section .hero-text button {
+    font-size: 0.7rem;
+    padding: 0.8em 1em;
+  }
+  .splide {
+    max-width: 430px;
+  }
+  footer {
+    gap: 2em;
+  }
+  footer .working-hours ul {
+    gap: 0.78em;
+  }
+  footer .working-hours ul li p {
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .container header {
+    display: none;
+  }
+  main .hero-section {
+    gap: 1em;
+  }
+  .hero-section .hero-text {
+    margin-inline: auto;
+    text-align: center;
+  }
+  .hero-section .hero-text h1 {
+    font-size: 3.2rem;
+  }
+  .hero-section .hero-text button {
+    font-size: 1.2rem;
+  }
+  .splide {
+    max-width: 100%;
+  }
+  footer .testimonials {
+    max-width: 100%;
+    text-align: center;
+  }
+  footer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 475px) {
+  .container {
+    max-width: 100%;
+  }
+  .hero-section .hero-text button {
+    max-width: 100%;
+  }
+  .splide {
+    max-width: 100%;
+  }
+  .splide .splide__slide {
+    padding: 0.3em;
+  }
+  footer .working-hours ul {
+    flex-direction: column;
+  }
+}
