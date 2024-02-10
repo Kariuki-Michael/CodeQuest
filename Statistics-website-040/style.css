@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #f0f4fa;
+  padding: 0.5em;
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  background: #fefffe;
+  margin-inline: auto;
+  max-width: 750px;
+  border: 4px solid black;
+  padding: 1em 1em 2em 1em;
+  border-radius: 0.8em;
+  box-shadow: 0px 2px 12px 8px #c9cede;
+}
+.container .search-wrapper {
+  text-align: center;
+  margin-block: 0.8em 3em;
+  padding-inline: 3em;
+}
+.container .search-wrapper h1 {
+  color: #1a1b36;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+.container .search-wrapper .search-bar {
+  font-size: 1.3rem;
+  border: 2px solid #dadbe1;
+  display: flex;
+  align-items: center;
+  padding-inline: .8em;
+  border-radius: .2em;
+}
+.container .search-wrapper .search-bar i {
+  margin-inline: auto;
+}
+.container .search-wrapper .search-bar input {
+  padding: 0.8em 1em;
+  font-size: 0.9rem;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.container ul.grid-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.4em;
+}
+.container ul li{
+    list-style: none;
+    box-shadow: 0px 0px 12px 1px gray;
+    border-radius: .5em;
+    padding: 1em;
+    display: grid;
+    gap: .8em;
+}
+.container ul li h2{
+  color: #1a1b36;
+  font-size: 1rem;
+}
+.container ul li p{
+  font-weight: 600;
+  font-size: .8rem;
+}
+.container ul li span.buttons{
+  cursor: pointer;
+  color: #2f2a3e;
+  border: 2px solid #2820342b;
+  padding: .4em;
+  border-radius: 1.6em;
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+}
+.container ul li span.buttons a{
+  text-decoration: none;
+  color: #2f2a3e;
+  transition: all .2s ease;
+}
+.container ul li span.buttons a:hover{
+  padding-right: .4em;
+}
+.container ul li span a{
+  font-size: .7rem;
+    font-weight: 600;
+}
+li:nth-child(1){
+  background: #e5e7f5;
+}
+li:nth-child(2){
+  background: #f7e5f4;
+}
+li:nth-child(3){
+  background: #f8e4e4;
+}
+li:nth-child(3) span.buttons{
+  background: #fffffe;
+  border-color: transparent !important;
+}
+@media (max-width: 640px){
+  .container{
+    max-width: 100%;
+  }
+  .container .search-wrapper{
+    padding: 1em;
+  }
+  .container .search-wrapper .search-bar input{
+    max-width: 100%;
+  }
+}
