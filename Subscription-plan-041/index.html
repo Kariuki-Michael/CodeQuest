@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>iCodeThis | Subscription Plan</title>
+        <meta name="description" content="iCodeThis Subscription Plan Challenge 041">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    </head>
+    <body>
+        <form>
+            <div class="icon-holder">
+                <i class="fa-regular fa-image"></i>
+                <p>Basic</p>
+            </div>
+            <div class="display-wrapper">
+                <span>
+                    <label>KR</label>
+                    <input type="text" name="display" readonly>
+                </span>
+                <h4>NOK/MONTH</h4>
+            </div>
+            <div class="btn-wrapper">
+                <div class="plans-button">
+                    <button type="button" value="99" onclick="display.value = '99'">10</button>
+                    <button type="button" value="199" onclick="display.value = '199'">25</button>
+                    <button type="button" value="299" onclick="display.value = '299'">50</button>
+                    <button type="button" value="399" onclick="display.value = '399'">100</button>
+                </div>
+                <p class="btn-text">Downloads per month</p>
+            </div>
+            <button type="submit" class="subscribe">Subscribe</button>
+        </form>
+    </body>
+</html>

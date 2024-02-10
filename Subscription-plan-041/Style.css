@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background: #f0f2ff;
+}
+form{
+    max-width: 360px;
+    border-radius: .8em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fefffe;
+    box-shadow: 2px 2px 12px 3px #dee5f8;
+}
+form .icon-holder{
+    width: 4.8em;
+    padding-block: .8em;
+    border: 2px solid #d3d4de;
+    border-radius: 50%;
+    text-align: center;
+    text-transform: uppercase;
+}
+form .icon-holder i{
+    color: #212243;
+    font-size: 1.8rem;
+}
+form .icon-holder p{
+    color: #1e2651;
+    font-size: .6rem;
+    font-weight: 600;
+    margin-top: .4em;
+}
+form .display-wrapper{
+    text-align: center;
+}
+form .display-wrapper span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 1em 0;
+}
+form .display-wrapper span label{
+    color: #1e2651;
+    font-size: .7rem;
+    font-weight: 500;
+    margin-right: .8em;
+}
+form .display-wrapper span input{
+    font-family: 'Montserrat', sans-serif;
+    color: #1e2651;
+    max-width: 16%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+form .display-wrapper h4{
+    font-size: .7rem;
+    color: #1e2651;
+}
+form .btn-wrapper .plans-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding-block: 2em .8em;
+}
+form .btn-wrapper .plans-button button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1e2651;
+    cursor: pointer;
+    width: 3.6em;
+    padding-block: .6em;
+    background: transparent;
+    border: 3px solid #e0e3f1;
+    border-radius: .4em;
+    transition: all .2s ease-in-out;
+}
+form .btn-wrapper .plans-button button:hover,
+form .btn-wrapper .plans-button button:active{
+    background: #1a245b;
+    color: #f7fbfe;
+    border-color: transparent;
+}
+form .btn-wrapper p.btn-text{
+    text-align: center;
+    font-weight: 500;
+    font-size: .9rem;
+}
+form button.subscribe{
+    background: #1a245a;
+    color: #edf2ff;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding-block: .9em;
+    margin-block: 1.2em 2em;
+    border-radius: .8em;
+    border: 2px solid transparent;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 2px 2px 12px 3px #cad0dd;
+    transition: all .2s ease-in-out;
+}
+form button.subscribe:hover,
+form button.subscribe:active{
+    background: transparent;
+    border-color: #1a245a;
+    color: #1a245a;
+}
+@media (max-width: 640px){
+    form{
+        max-width: 100%;
+    }
+    form button.subscribe{
+        width: 100%;
+    }
+}
