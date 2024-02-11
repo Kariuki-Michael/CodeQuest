@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --ff-merriweather: 'Merriweather', serif;
+    --ff-roboto: 'Roboto', sans-serif;
+}
+body{
+    padding: 1em;
+    background: #eff3ff;
+}
+.container {
+    background: #fefffe;
+    max-width: 400px;
+    margin-inline: auto;
+    box-shadow: 2px 6px 12px 6px #e7ebfa;
+    padding: 1em;
+    border-radius: .5em;
+}
+.container .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .header span h1{
+    color: #3d3d60;
+    font-family: var(--ff-merriweather);
+    font-size: 1.5rem;
+    line-height: 1.2em;
+}
+.container .header span p{
+    font-size: 1rem;
+    font-family: var(--ff-roboto);
+    color: #9493a4;
+}
+.container .header span p a{
+    color: #9394a6;
+}
+.container .header i{
+    font-size: 1.5rem;
+    color: #9394a6;
+}
+.container .completed-wrap h2{
+    font-size: .8rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-family: var(--ff-roboto);
+    font-weight: 400;
+    margin-block: 0em .8em;
+}
+.container .pending-wrap,
+.container .completed-wrap .input-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+}
+.container .pending-wrap,
+.container .completed-wrap{
+    margin-block: 1.5em;
+}
+.container button{
+    cursor: pointer;
+    background: #3b3b6f;
+    color: #fcfdfe;
+    font-size: 1.6rem;
+    padding: .3em .6em;
+    border: 1px solid transparent;
+    border-radius: .4em;
+    display: block;
+    margin-left: auto;
+}
+input[type = 'checkbox']{
+    appearance: none;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 50%;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+input[type = 'checkbox']:checked{
+    background: #9495ad;
+    color: wheat;
+}
+label{
+    font-size: 1.1rem;
+    font-family: var(--ff-roboto);
+}
+.pending-wrap label{
+    color: #3e3b5e;
+}
+.completed-wrap label{
+    color: #9b9bab;
+}
