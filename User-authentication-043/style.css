@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    padding: .5em;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    background: linear-gradient(to right, #f6f5fb, #fdeeee);
+}
+.container{
+    background: #fefeff;
+    color: #363a4a;
+    max-width: 380px;
+    box-shadow: 2px 2px 12px 4px #f8e8ef;
+    border-radius: .8em;
+    display: grid;
+    place-items: center;
+    padding: 1.6em;
+}
+.container header{
+    text-align: center;
+}
+.container header img{
+    width: 6em;
+    height: 6em;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid #dcd8df;
+}
+.container header p.invite{
+    margin-block: .5em;
+    font-size: .9rem;
+}
+.container header h1{
+    color: #212849;
+    font-size: 1.3rem;
+    margin-block-end: .5em;
+}
+.container header span{
+    display: flex;
+    gap: .5em;
+    background: #f6f5fb;
+    color: #40424f;
+    padding: .6em .8em;
+    border-radius: .3em;
+    font-weight: 500;
+    font-size: .9rem;
+    margin-block-end: 1.6em;
+}
+.container form{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.container form input[type = 'text']{
+    width: 100%;
+    padding: .8em;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: .3em;
+    border: 2px solid black;
+}
+.container form .input-wrap label{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+.container form input[type = 'checkbox']{
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+.container form .terms-wrap label{
+    font-size: .9rem;
+}
+.container form .terms-wrap label a{
+    color: #853b62;
+}
+.container form button{
+    background: #853b62;
+    color: #fdddfb;
+    padding-block: .8em;
+    border-radius: .4em;
+    border: 2px solid transparent;
+    font-weight: 600;
+}
+.container a.login-link{
+    margin-block: 2em;
+    font-size: 1rem;
+    color: #853b62
+}
