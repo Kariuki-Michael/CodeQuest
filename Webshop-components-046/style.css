@@ -1,0 +1,200 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: 2em;
+    font-family: "Inter", sans-serif;
+    background: #e2f4f5;
+}
+.container{
+    max-width: 800px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+.card-1, .card-2{
+    display: grid;
+    gap: 2em;
+    flex: 1 0 0;
+}
+.container .flex-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .8em;
+}
+p span{
+    font-weight: 600;
+}
+i.fa-chevron-right{
+    font-size: 1.1rem;
+    background: #1a5f82;
+    padding: .3em;
+    border-radius: 50%;
+}
+.card-1 .offers,
+.card-2 .payment{
+    background: #2c688d;
+    color: #f1fcfe;
+}
+.card-1 .offers,
+.card-1 .sales,
+.card-2 .payment{
+    max-width: 400px;
+    padding: 1em;
+    border-radius: .8em;
+    box-shadow: 2px 2px 12px 4px #cfeee8;
+}
+.card-1 .offers .offers-txt h2,
+.card-1 .sales .sales-txt h2,
+.card-2 .payment h2{
+    font-size: .9rem;
+    font-weight: 500;
+}
+.card-1 .offers .offers-txt p,
+.card-1 .sales .sales-txt p,
+.card-2 .payment .payment-txt p{
+    font-size: .8rem;
+    font-weight: 400;
+}
+.card-1 .products{
+    max-width: 320px;
+    background: #fefeff;
+    color: #26273f;
+    box-shadow: 2px 2px 12px 4px #cfeee8;
+    border-radius: .8em;
+}
+.card-1 .products .flex-wrapper{
+    padding-block: 1.5em;
+    padding-inline: 1.5em;
+    border-bottom: 2px solid #e2f4f5;
+}
+.card-1 .products .kitchenware{
+    border-bottom-color: transparent;
+}
+.card-1 .products .flex-wrapper i{
+    font-size: 1.4rem;
+}
+.card-1 .products .flex-wrapper i.fa-arrow-right{
+    font-size: 1.2rem;
+    background: #e5f6f4;
+    color: #577885;
+    padding: .4em;
+    border-radius: 50%;
+}
+.card-1 .products .flex-wrapper span{
+    display: inline-block;
+    margin-right: auto;
+    margin-left: 1em;
+}
+.card-1 .products .flex-wrapper span h3{
+    font-size: .9rem;
+}
+.card-1 .products .flex-wrapper span p{
+    font-size: .9rem;
+    font-weight: 400;
+}
+.card-1 .sales{
+    background: #fefeff;
+}
+.card-1 .sales i{
+    background: #e3f5f7;
+    color: #326886;
+}
+ul li{
+    list-style: none;
+}
+.card-2 .header{
+    background: #fefeff;
+    box-shadow: 2px 2px 12px 4px #cfeee8;
+    border-radius: .4em;
+    padding: .8em;
+    text-align: center;
+    max-width: 280px;
+}
+.card-2 .header ul li{
+    display: inline-block;
+    padding: .6em 1.2em;
+    border-radius: .5em;
+    font-weight: 500;
+    font-size: .9rem;
+    cursor: pointer;
+}
+.card-2 .header ul li.active{
+    background: #2c688d;
+    color: #e0ffff;
+}
+.card-2 .header ul li:hover,
+.card-2 .header ul li:active{
+    background: #2c688d;
+    color: #e0ffff;
+}
+.card-2 .image-slider{
+    box-shadow: 2px 2px 12px 4px #cfeee8;
+    background: url(https://images.pexels.com/photos/14706900/pexels-photo-14706900.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 300px;
+    padding-block: 7em;
+    border-radius: .8em;
+}
+.card-2 .image-slider i{
+    background: #fffffe;
+    font-size: 1.3rem;
+    color: #fe6063;
+    padding: .5em;
+    border-radius: 50%;
+    position: relative;
+    bottom: 2.4em;
+    left: 80%;
+}
+.card-2 .image-slider ul.pagination{
+    text-align: center;
+}
+.card-2 .image-slider ul.pagination li{
+    background: #fffffe;
+    display: inline-block;
+    width: 1em;
+    height: .2em;
+    position: relative;
+    top: 6em;
+}
+.card-2 .image-slider ul.pagination li.active-page{
+    background: #3f6475;
+    height: .3em;
+}
+.card-2 .image-slider ul.pagination li:active{
+    background: #3f6475;
+}
+.card-2 .payment img{
+    width: 3.5em;
+    height: 3.5em;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #fffffe;
+}
+@media (max-width: 475px){
+    body{
+        padding: 2em .5em;
+    }
+    .container,
+    .card-2 .image-slider,
+    .card-1 .products,
+    .card-1 .offers,
+    .card-1 .sales,
+    .card-2 .payment{
+        max-width: 100%;
+    }
+}
