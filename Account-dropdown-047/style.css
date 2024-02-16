@@ -1,0 +1,137 @@
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Helvetica, sans-serif;
+    background: #efefee;
+}
+.container header{
+    padding: 6em 2em;
+    background: #1776d2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+}
+.container header i{
+    font-size: 1.3rem;
+    color: #c5f7fd;
+}
+.dropdown{
+    min-width: 15em;
+}
+.select{
+    padding: .5em .5em;
+    width: 5em;
+    background: #0e6ab8;
+    color: #effeff;
+    border-radius: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.select span{
+    font-size: 1.2rem;
+}
+.caret{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #effeff;
+    transition: .3s;
+}
+.caret-rotate{
+    transform: rotate(180deg);
+}
+.menu{
+    list-style: none;
+    background: #f4f7f8;
+    box-shadow: 0px 2px 12px 3px #acb6bf;
+    border-radius: .8em;
+    position: absolute;
+    top: 9em;
+    left: 65%;
+    display: none;
+    opacity: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+.menu-active{
+    display: block;
+    opacity: 1;
+}
+.menu li{
+    padding-block: .5em;
+    padding-inline: 1.4em;
+}
+.menu li span.pro{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #b0325a;
+}
+.menu li.profile-info{
+    display: flex;
+    align-items: center;
+    gap: .8em;
+    width: 100%;
+    background: #fefeff;
+    padding-inline: 1.4em;
+    padding-block: 1em;
+}
+.menu li.profile-info img{
+    width: 5em;
+    height: 5em;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 12px 1px #acb6bf;
+}
+.menu li.profile-info span h1{
+    font-size: 1.2rem;
+    line-height: 1.2em;
+    color: #5b6f6f;
+}
+.menu li.profile-info span h3{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #6f7976;
+}
+.menu li.profile-info span button{
+    padding: .3em .5em;
+    margin-top: .5em;
+    border-radius: .4em;
+    border: 1px solid transparent;
+    font-size: .96rem;
+}
+button.view{
+    background: #1377d0;
+    color: #d0f7fe;
+}
+button.add{
+    background: transparent;
+    color: #4e6e7f;
+}
+@media (max-width: 768px){
+    .menu{
+        left: 30%;
+    }
+}
+@media (max-width: 475px){
+    .menu{
+        left: 2em;
+        top: 10em;
+        max-width: 100%;
+        padding: .5em;
+    }
+    .dropdown{
+        min-width: 0;
+    }
+}
