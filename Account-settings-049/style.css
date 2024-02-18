@@ -1,0 +1,125 @@
+
+
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #f5f4f5;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    gap: 1em;
+}
+section{
+    background: #fffefe;
+    width: 640px;
+    padding: 1em;
+    box-shadow: 2px 2px 12px 4px #edeaf0;
+    border-radius: .5em;
+}
+section header{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    margin-block: 1.6em;
+}
+section header img{
+    width: 2.4em;
+    height: 2.4em;
+    object-fit: cover;
+}
+section header span h2{
+    font-size: 1.2rem;
+    color: #1f2944;
+}
+section header span p{
+    font-size: .9rem;
+    margin-top: .3em;
+    color: #a0a0a4;
+}
+section span.btn-holder i{
+    font-size: 1.4rem;
+    border: 1px solid #e4b666;
+    color: #e4b666;
+    padding: .2em;
+    border-radius: 50%;
+}
+section span.btn-holder a{
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: #e4b666;
+}
+section.login ul li{
+    list-style: none;
+    margin-block: 1em;
+}
+section.login ul li.heading{
+    font-weight: 600;
+    font-size: .9rem;
+}
+section.login ul li.flex-holder span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+section.login ul li.flex-holder span a.btn-link{
+    font-size: .9rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #f2f5f6;
+    color: #444b5b;
+    padding: .3em;
+    border-radius: .2em;
+}
+section.login ul li.flex-holder span i{
+    font-size: 1.5rem;
+    margin-right: 1em;
+    color: #868686;
+}
+section.login ul li.holder-1{
+    border-bottom: 2px solid #868686;
+    padding-bottom: 1em;
+}
+section.phone .txt-holder{
+    text-align: center;
+    margin-block: 1em;
+}
+section.phone .txt-holder h3{
+    font-size: 1rem;
+    color: #313448;
+}
+
+section.phone .txt-holder p{
+    text-wrap: balance;
+    margin-top: .8em;
+    color: #3c4150;
+}
+@media (max-width: 640px){
+    body{
+        align-items: flex-start;
+    }
+    section{
+        width: 100%;
+    }
+    section.phone .txt-holder p{
+        text-wrap: wrap;
+    }
+    section header img{
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+}
