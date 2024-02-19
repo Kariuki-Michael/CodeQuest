@@ -1,0 +1,126 @@
+
+
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #052945;
+    padding: .5em;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    background: #072f51;
+    max-width: 320px;
+    flex: 1 0 0;
+    border-radius: .8em;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px 3px #04253a;
+}
+.container header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 1em;
+    padding-inline: 1em;
+    color: #fafefe;
+}
+.container header i{
+    font-size: 1.5rem;
+}
+.container header h1{
+    font-size: 1.3rem;
+}
+.container section.time{
+    padding-inline: 0;
+    padding-block: 4em;
+    text-align: center;
+    color: #f8ffff;
+}
+.container section.time h2{
+    font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 1.4em;
+}
+.container section.time h3{
+    font-size: .9rem;
+    font-weight: 400;
+}
+.container section.alarms{
+    background: #003663;
+    padding-inline: 1em;
+    padding-block: 0 2em;
+    display: grid;
+    gap: 1em;
+}
+.container section.alarms .plus-icon{
+    text-align: right;
+}
+.container section.alarms i{
+    cursor: pointer;
+    font-size: 1.6rem;
+    background: #37c2fe;
+    color: #f3fefd;
+    padding: .4em;
+    border-radius: 50%;
+    position: relative;
+    bottom: .92em;
+}
+.container section.alarms .alarm-time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container section.alarms .alarm-time h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.container section.alarms .alarm-time ul li{
+    list-style: none;
+    display: inline;
+    font-size: .96rem;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-left: .4em;
+}
+.container section.alarms .alarm-time ul li.inactive{
+    color: #335f83 !important;
+}
+.slider-btn .horizontal{
+    width: 2.8em;
+    height: .3em;
+    background: #012646;
+    border-radius: .5em;
+}
+.slider-btn{
+    cursor: pointer;
+}
+.circle{
+    width: 1.5em;
+    height: 1.5em;
+    background: #012646;
+    border-radius: 50%;
+    position: relative;
+    bottom: .9em;
+    transition: all .2s ease;
+}
+.time-txt{
+    color: #335f83;
+}
+.circle-active{
+    background: #34c2ff;
+    position: relative;
+    left: 1.5em;
+}
+.time-active{
+    color: #fcfcfa;
+}
