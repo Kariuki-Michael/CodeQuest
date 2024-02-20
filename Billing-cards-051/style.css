@@ -1,0 +1,116 @@
+
+
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #1f1f32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    padding: .5em;
+}
+.container{
+    flex: 1 0 0;
+    max-width: 768px;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.container section{
+    background: #262642;
+    color: #e8edf3;
+}
+.container section.plan{
+    max-width: 250px;
+    flex: 1 0 0;
+    padding: 1em;
+    box-shadow: -2px 2px 12px 3px #1c1f32;
+    border-radius: .5em;
+    display: grid;
+    gap: .9em;
+    transition: .1s ease-in-out;
+}
+.container section.plan:hover{
+    box-shadow: -16px 16px 4px 6px #e94172;
+}
+.container section.plan h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.container section.plan .link-wrap button{
+    cursor: pointer;
+    padding: .5em 1em;
+    border-radius: .5em;
+    border: 1px solid transparent;
+    font-size: .9rem;
+    background: #e94172;
+    margin-right: .3em;
+}
+.container section.plan .link-wrap button a{
+    text-decoration: none;
+    color: #ffdfef;
+}
+.container section.plan .link-wrap a.cancel{
+    font-size: .9rem;
+    font-weight: 500;
+    color: #9395a9;
+}
+.container section.table{
+    max-width: 360px;
+    flex: 1 0 0;
+    box-shadow: -2px 2px 12px 3px #1c1f32;
+    border-radius: .5em;
+    padding: .8em;
+    display: grid;
+    gap: .5em;
+    transition: .1s ease-in-out;
+}
+.container section.table:hover{
+    box-shadow: 16px -16px 4px 6px #e94172;
+}
+.container section.table h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.container section.table span{
+    display: flex;
+    gap: 2em;
+    flex-wrap: nowrap;
+    padding: .5em;
+    border: 1px solid transparent;
+    border-radius: .5em;
+}
+.container section.table span.active{
+    background: #1f1f32;
+}
+.container section.table span.active a{
+    text-decoration: none;
+    color: #b95783;
+}
+.container section.table button{
+    max-width: 160px;
+    padding: .8em 1em;
+    font-size: .9rem;
+    border-radius: .5em;
+    border: 2px solid #2f3152;
+    background: transparent;
+    color: #d6d9e0;
+}
+@media (max-width: 475px){
+    .container section.table span{
+        font-size: .7rem;
+        font-weight: 500;
+    }
+}
