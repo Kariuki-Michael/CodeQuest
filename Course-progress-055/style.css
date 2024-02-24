@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*,
+::after,
+::before{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body,
+html{
+    height: 100%;
+}
+body{
+    background: #122b63;
+    padding: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Mono", monospace;
+}
+.container{
+    background: #12295b;
+    flex: 100%;
+    max-width: 475px;
+    box-shadow: -4px 8px 12px 4px #0f2552;
+    border-radius: .5em;
+    overflow: hidden;
+}
+.container header{
+    text-align: center;
+    padding: 1em;
+    background: #0c2150;
+}
+.container header h1{
+    font-size: 1.6rem;
+    color: #0a80be;
+}
+.container header p{
+    font-size: .975rem;
+    text-wrap: balance;
+    margin-top: .4em;
+    color: #a7b1c3;
+}
+.container main{
+    padding: 1em 2.4em;
+}
+.container main h2{
+    color: #afb0c2;
+    font-size: 1.115rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.container main ol li{
+    line-height: 2.4;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+li.completed-lessons{
+    color: #b3becb;
+}
+li.completed-lessons span{
+    color: #b3becb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+li.active-lesson{
+    background: #0090d5;
+    color: #afe0fc;
+}
+li.pending-lessons{
+    color: #33487b;
+}
+@media(max-width: 475px){
+    .container{
+        max-width: 100%;
+    }
+    .container header h1{
+        font-size: 1.3rem;
+    }
+    .container header p{
+        font-size: .8rem;
+    }
+}
