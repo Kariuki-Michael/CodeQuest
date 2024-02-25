@@ -1,0 +1,255 @@
+
+
+/*--- CSS RESETS ---*/
+
+/*--- https://piccalil.li/blog/a-modern-css-reset ---*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html,
+body{
+    height: 100%;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root{
+    --f-family: "Inter", sans-serif;
+
+    /*--- Font Weights ---*/
+    --fw-thin: 300;
+    --fw-reqular: 400;
+    --fw-medium: 500;
+    --fw-sbold: 600;
+    --fw-bold: 700;
+
+    /*--- Colors ---*/
+    --color-gradient: linear-gradient(120deg, #f57529, #f63762);
+    --color-primary: #ffffff;
+    --color-secondary: #ececec;
+    --color-accent: #ea4459;
+    --btext-color: #5a5b5a;
+
+    /*--- Font Sizes*/
+    --fs-300: .7rem;
+    --fs-400: 1rem;
+    --fs-500: 1.2rem;
+    --fs-600:1.4rem;
+    --fs-700: 1.8rem;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/*Utility Classes*/
+.fs-thin{
+    font-size: var(--fs-300);
+}
+.fs-reg{
+    font-size: var(--fs-400);
+}
+.fs-medium{
+    font-size: var(--fs-500);
+}
+.fs-sbold{
+    font-size: var(--fs-600);
+}
+.fs-bold{
+    font-size: var(--fs-700);
+}
+.fw-thin{
+    font-weight: var(--fw-thin);
+}
+.fw-reg{
+    font-weight: var(--fw-reqular);
+}
+.fw-medium{
+    font-weight: var(--fw-medium);
+}
+.fw-sbold{
+    font-weight: var(--fw-sbold);
+}
+.fw-bold{
+    font-weight: var(--fw-bold);
+}
+.color-primary{
+    color: var(--color-primary);
+}
+.block-spacer{
+    margin-block: 1em;
+}
+.to-upper{
+    text-transform: uppercase;
+}
+.align-c{
+    text-align: center;
+}
+.accent{
+    color: var(--color-accent);
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+.flex-wrap-rows{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5em;
+    flex-wrap: nowrap;
+}
+.flex-wrap-column{
+    display: flex;
+    flex-direction: column;
+}
+.animation{
+    animation: blink 1.35s ease-in-out infinite;
+}
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*--- CUSTOM STYLING ---*/
+body{
+    padding: .5em;
+    background: url(https://images.pexels.com/photos/1225236/pexels-photo-1225236.jpeg?auto=compress&cs=tinysrgb&w=600), linear-gradient(120deg, #f57529, #f63762);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    max-width: 400px;
+    font-family: var(--f-family);
+    margin-inline: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 4px solid #000;
+    border-radius: .5em;
+    overflow: hidden;
+    background: var(--color-secondary);
+    color: var(--btext-color);
+}
+header{
+    padding: .5em;
+}
+footer{
+    padding: .5em;
+    background: var(--color-primary);
+}
+footer i{
+    font-size: var(--fs-600);
+}
+.ticket-wrapper{
+    background: var(--color-primary);
+}
+.ticket-info{
+    background: var(--color-gradient);
+    padding-block: 1em;
+}
+.bar-code{
+    border-top: 2px dotted #000;
+    padding: 1em .5em;
+    box-shadow: -4px -2px 12px gainsboro;
+    border-radius: .5em;
+    background: var(--color-primary);
+}
+main{
+    padding: .5em;
+}
+.ticket-wrapper{
+    border-top: 5px solid var(--color-accent);
+    box-shadow: -4px -2px 12px gainsboro;
+    border-radius: .5em;
+    padding-block: 1em;
+    overflow: hidden;
+}
+.bg-image{
+    background: url(https://i.ibb.co/F5rMDB2/9185570.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 4em;
+    width: auto;
+}
+.is-hovered{
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: .5em;
+    padding: .4em;
+    flex: 100%;
+    transition: .2s ease;
+}
+.is-hovered:hover{
+    background: var(--color-gradient);
+    color: var(--color-secondary);
+}
+.is-hovered:hover p{
+    color: var(--color-secondary);
+}
