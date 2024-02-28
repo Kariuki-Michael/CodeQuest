@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>iCodeThis | Filter Components</title>
+        <meta name="description" content="Filter Components #059">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header flex-wrap-rows">
+                <div class="input-wrap no-wrap bg-light">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" name="search" id="search-bar" placeholder="Search for apps">
+                </div>
+                <div class="dropdown-items flex-wrap-rows">
+                    <div class="dropdown flex-1">
+                        <div class="select jc-space-btwn">
+                            <span class="fs-medium">Sort</span>
+                            <i class="caret fa-solid fa-chevron-up"></i>
+                        </div>
+                        <ul role="list" class="menu bg-light color-60">
+                            <li>Top rated</li>
+                            <li class="active">Top trending</li>
+                            <li>Top selling</li>
+                            <li>Newest</li>
+                        </ul>
+                    </div>
+                    <span class="chk-box flex-1">
+                        <input type="checkbox" name="checkbox" id="free">
+                        <label class="fs-medium" for="free">Free for all teams</label>
+                    </span>
+                    <div class="dropdown flex-1">
+                        <div class="select jc-space-btwn">
+                            <span class="fs-medium">More Filters</span>
+                            <i class="caret fa-solid fa-chevron-up"></i>
+                        </div>
+                        <ul role="list" class="menu bg-light color-60">
+                            <li>Top rated</li>
+                            <li class="active">Top trending</li>
+                            <li>Top selling</li>
+                            <li>Newest</li>
+                        </ul>
+                    </div>
+                    <div class="dropdown flex-1">
+                        <div class="select jc-space-btwn">
+                            <span class="fs-medium">Categories</span>
+                            <i class="caret fa-solid fa-chevron-up"></i>
+                        </div>
+                        <ul role="list" class="menu bg-light color-60">
+                            <li>Top rated</li>
+                            <li class="active">Top trending</li>
+                            <li>Top selling</li>
+                            <li>Newest</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content bg-light">
+                <div class="img-block"></div>
+                <h2 class="fw-500 fs-bold color-60">Intranet Suite</h2>
+                <p class="color-60 fs-medium fw-500 txt-wrap">Your fully personalized central collaboration hub that connects teams, locations, tools and people</p>
+                <ul role="list" class="tags fs-thin fw-500">
+                    <li>mobile</li>
+                    <li>project management</li>
+                    <li>themes & styles</li>
+                </ul>
+                <div class="ratings-wrap color-10 fs-bold">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <a class="fs-medium color-60" href="#">45 reviews</a>
+            </div>
+        </div>
+        <script src="index.js" async defer></script>
+    </body>
+</html>
