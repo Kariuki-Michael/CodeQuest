@@ -1,0 +1,255 @@
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+body, html{
+    height: 100%;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --f-family: "Poppins", sans-serif;
+
+    /*Font Weights*/
+    --fw-thin: 300;
+    --fw-reg: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /*Font Sizes*/
+    --fs-100: 0.625rem;
+    --fs-200: 0.75rem;
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.125rem;
+    --fs-600: 1.25rem;
+    --fs-700: 1.5rem;
+    --fs-800: 1.875rem;
+    --fs-900: 2.25rem;
+
+    /* Colors */
+    --light-color: hsl(120, 100%, 100%);
+    --dark-color: hsl(256, 70%, 15%);
+    --accent-color: hsl(28, 100%, 66%);
+    --bg-color: hsl(213, 69%, 95%);
+    --shadow-color: hsl(218, 54%, 89%);
+    --twitter-color:#8ac0ff;
+    --fb-color: #3693e8;
+    --IG-color: #ea8452;
+}
+
+/*------ UTILITY CLASSES ------*/
+.fs-xlight{
+    font-size: var(--fs-100);
+}
+.fs-light{
+    font-size: var(--fs-200);
+}
+.fs-thin{
+    font-size: var(--fs-300);
+}
+.fs-regular{
+    font-size: var(--fs-400);
+}
+.fs-medium{
+    font-size: var(--fs-500);
+}
+.fs-sbold{
+    font-size: var(--fs-600);
+}
+.fs-bold{
+    font-size: var(--fs-700);
+}
+.fs-xbold{
+    font-size: var(--fs-800);
+}
+.fs-dark{
+    font-size: var(--fs-900);
+}
+.fw-300{
+    font-weight: var(--fw-thin);
+}
+.fw-400{
+    font-weight: var(--fw-reg);
+}
+.fw-500{
+    font-weight: var(--fw-medium);
+}
+.fw-600{
+    font-weight: var(--fw-semibold);
+}
+.fw-700{
+    font-weight: var(--fw-bold);
+}
+.upper{
+    text-transform: uppercase;
+}
+.text-center{
+    text-align: center;
+}
+.lh{
+    line-height: 1em;
+}
+/*-------- FLEX & GRID UTILITY CLASSES ----------*/
+.grid{
+    display: grid;
+}
+.grid-gap{
+    gap: .8em;
+}
+.ac-center{
+    align-content: center;
+}
+.flex-rows{
+    display: flex;
+}
+.flex-colum{
+    display: flex;
+    flex-direction: column;
+}
+.flex-100{
+    flex: 1 0 0;
+}
+.jc-center{
+    justify-content: center;
+}
+.gap{
+    gap: 2em;
+}
+.ai-center{
+    align-items: center;
+}
+
+/*--------COLORS CLASSES ----------*/
+
+.bg-light{
+    background: var(--light-color);
+}
+.bg-dark{
+    background: var(--dark-color);
+}
+.bg-accent{
+    background: var(--accent-color);
+}
+.bg-transparent{
+    background: transparent;
+}
+.color-60{
+    color: var(--light-color);
+}
+.color-30{
+    color: var(--dark-color);
+}
+.color-10{
+    color: var(--accent-color);
+}
+.twitter{
+    color: var(--twitter-color);
+}
+.fb{
+    color: var(--fb-color);
+}
+.insta{
+    color: var(--IG-color);
+}
+
+.block-spacer{
+    margin-top: .5em;
+}
+/*--------- CUSTOM STYLING ---------*/
+
+body{
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    font-family: var(--f-family);
+}
+.container section{
+    max-width: 120px;
+    padding: 1em .5em;
+    background: hsla(0, 0%, 90%, 0.437);
+    box-shadow: 4px 8px 12px 4px var(--shadow-color),
+                -4px -4px 12px 4px var(--shadow-color);
+    border-radius: .5em;
+    border-top: 5px solid var(--accent-color);
+}
+span{
+    background: var(--light-color);
+    border-radius: .5em;
+    padding: 1em .5em;
+    cursor: pointer;
+}
+.container section button{
+    width: 100%;
+    border: 2px solid transparent;
+    border-radius: .5em;
+    background: var(--accent-color);
+    color: var(--light-color);
+}
