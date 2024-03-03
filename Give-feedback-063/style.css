@@ -1,0 +1,350 @@
+
+
+
+/*----------- CSS RESETS -------------*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+body, html{
+    height: 100%;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*------------- CSS VARIABLES --------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --f-family: "Lato", sans-serif;
+
+    /*Font Weights*/
+    --fw-thin: 300;
+    --fw-reg: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /*Font Sizes*/
+    --fs-100: 0.625rem;
+    --fs-200: 0.75rem;
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.125rem;
+    --fs-600: 1.25rem;
+    --fs-700: 1.5rem;
+    --fs-800: 1.875rem;
+    --fs-900: 2.25rem;
+
+    /* Colors */
+    --light-color: hsl(0, 100%, 100%);
+    --dark-color: hsl(180, 100%, 0%);
+    --accent-color: hsla(0, 0%, 54%, 0.595);
+    --bg-color: hsl(120, 3%, 94%);
+}
+
+/*------ UTILITY CLASSES ------*/
+.fs-xlight{
+    font-size: var(--fs-100);
+}
+.fs-light{
+    font-size: var(--fs-200);
+}
+.fs-thin{
+    font-size: var(--fs-300);
+}
+.fs-regular{
+    font-size: var(--fs-400);
+}
+.fs-medium{
+    font-size: var(--fs-500);
+}
+.fs-sbold{
+    font-size: var(--fs-600);
+}
+.fs-bold{
+    font-size: var(--fs-700);
+}
+.fs-xbold{
+    font-size: var(--fs-800);
+}
+.fs-dark{
+    font-size: var(--fs-900);
+}
+.fw-300{
+    font-weight: var(--fw-thin);
+}
+.fw-400{
+    font-weight: var(--fw-reg);
+}
+.fw-500{
+    font-weight: var(--fw-medium);
+}
+.fw-600{
+    font-weight: var(--fw-semibold);
+}
+.fw-700{
+    font-weight: var(--fw-bold);
+}
+.upper{
+    text-transform: uppercase;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.lh{
+    line-height: .8em;
+}
+
+/*------------ DISPLAY UTILITY CLASSES --------------*/
+.flex-rows{
+    display: flex;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-100{
+    flex: 1 0 0;
+}
+.jc-center{
+    justify-content: center;
+}
+.jc-start{
+    justify-content: flex-start;
+}
+.jc-end{
+    justify-content: flex-end;
+}
+.jc-space-btwn{
+    justify-content: space-between;
+}
+.jc-space-around{
+    justify-content: space-around;
+}
+.jc-space-even{
+    justify-content: space-evenly;
+}
+.ai-center{
+    align-items: center;
+}
+.ai-start{
+    align-items: flex-start;
+}
+.ai-end{
+    align-items: flex-end;
+}
+.gap{
+    gap: 1.5em;
+}
+
+/*--------- MARGIN & PADDING --------------*/
+.m-auto{
+    margin: auto;
+}
+.m-block{
+    margin-block: 1em;
+}
+.m-inline{
+    margin-inline: .5em;
+}
+.m-0{
+    margin: 0;
+}
+.m-1{
+    margin: 0.25em;
+}
+.m-2{
+    margin: 0.5em;
+}
+.m-3{
+    margin: 0.75em;
+}
+.m-4{
+    margin: 1em;
+}
+.m-5{
+    margin: 1.25em;
+}
+.m-6{
+    margin: 1.5em;
+}
+.m-8{
+    margin: 2em;
+}
+.m-10{
+    margin: 2.5em;
+}
+
+/*----- Padding -------*/
+.p-0{
+    padding: 0;
+}
+.p-block{
+    padding-block: .5em;
+}
+.p-inline{
+    padding-inline: 1.5em;
+}
+.p-1{
+    padding: 0.25em;
+}
+.p-2{
+    padding: 0.5em;
+}
+.p-3{
+    padding: 0.75em;
+}
+.p-4{
+    padding: 1em;
+}
+.p-5{
+    padding: 1.25em;
+}
+.p-6{
+    padding: 1.5em;
+}
+.p-8{
+    padding: 2em;
+}
+.p-10{
+    padding: 4.5em;
+}
+
+/*--------- COLORS -----------*/
+.bg-light{
+    background: var(--light-color);
+}
+.bg-dark{
+    background: var(--dark-color);
+}
+.bg-transparent{
+    background: transparent;
+}
+.color-60{
+    color: var(--dark-color);
+}
+.color-30{
+    color: var(--light-color);
+}
+.color-10{
+    color: var(--accent-color);
+}
+
+/*--------- BORDERS -----------*/
+.border-1{
+    border-radius: .25em;
+}
+.border-rounded{
+    border-radius: 50%;
+}
+.border-colored{
+    border: 2px solid var(--accent-color);
+}
+.border-invisible{
+    border: 1px solid transparent;
+}
+
+
+/*------------- CUSTOM STYLINGS -------------*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    padding: .5em;
+}
+.container{
+    max-width: 475px;
+    font-family: var(--f-family);
+    box-shadow: 6px 4px 1px 2px var(--dark-color);
+    color: var(--dark-color);
+}
+input[type="checkbox"]{
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    border-radius: .2em;
+}
+button{
+    cursor: pointer;
+    font-size: var(--fs-300);
+    font-weight: var(--fw-medium);
+}
+
+@media (max-width: 475px){
+    .container{
+        max-width: 100%;
+        padding: 1.5em;
+    }
+}
