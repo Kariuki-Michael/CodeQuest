@@ -1,0 +1,465 @@
+
+
+
+/*----------- CSS RESETS -------------*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+body, html{
+    height: 100%;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*------------- CSS VARIABLES --------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --f-family: "Lato", sans-serif;
+
+    /*Font Weights*/
+    --fw-thin: 300;
+    --fw-reg: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /*Font Sizes*/
+    --fs-100: 0.625rem;
+    --fs-200: 0.75rem;
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.125rem;
+    --fs-600: 1.25rem;
+    --fs-700: 1.5rem;
+    --fs-800: 1.875rem;
+    --fs-900: 2.25rem;
+
+    /* Colors */
+    --light-color: #fffefe;
+    --dark-color: #2b384a;
+    --accent-color: hsl(175, 100%, 25%);
+    --bg-color: hsl(0, 2%, 9%);
+    --shadow-color: hsl(300, 2%, 8%);
+}
+
+/*------ UTILITY CLASSES ------*/
+.fs-xlight{
+    font-size: var(--fs-100);
+}
+.fs-light{
+    font-size: var(--fs-200);
+}
+.fs-thin{
+    font-size: var(--fs-300);
+}
+.fs-regular{
+    font-size: var(--fs-400);
+}
+.fs-medium{
+    font-size: var(--fs-500);
+}
+.fs-sbold{
+    font-size: var(--fs-600);
+}
+.fs-bold{
+    font-size: var(--fs-700);
+}
+.fs-xbold{
+    font-size: var(--fs-800);
+}
+.fs-dark{
+    font-size: var(--fs-900);
+}
+.fw-300{
+    font-weight: var(--fw-thin);
+}
+.fw-400{
+    font-weight: var(--fw-reg);
+}
+.fw-500{
+    font-weight: var(--fw-medium);
+}
+.fw-600{
+    font-weight: var(--fw-semibold);
+}
+.fw-700{
+    font-weight: var(--fw-bold);
+}
+.upper{
+    text-transform: uppercase;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-wrap{
+    text-wrap: wrap;
+}
+.text-balance{
+    text-wrap: balance;
+}
+.decoration-none{
+    text-decoration: none;
+}
+.lh{
+    line-height: 1.2em;
+}
+
+/*------------ DISPLAY UTILITY CLASSES --------------*/
+.inline{
+    display: inline;
+}
+.block{
+    display: block;
+}
+.inline-block{
+    display: inline-block;
+}
+.flex-rows{
+    display: flex;
+    flex-direction: row;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.nowrap{
+    flex-wrap: nowrap;
+}
+.flex-100{
+    flex: 1 0 0;
+}
+.jc-center{
+    justify-content: center;
+}
+.jc-start{
+    justify-content: flex-start;
+}
+.jc-end{
+    justify-content: flex-end;
+}
+.jc-space-btwn{
+    justify-content: space-between;
+}
+.jc-space-around{
+    justify-content: space-around;
+}
+.jc-space-even{
+    justify-content: space-evenly;
+}
+.ai-center{
+    align-items: center;
+}
+.ai-start{
+    align-items: flex-start;
+}
+.ai-end{
+    align-items: flex-end;
+}
+.gap{
+    gap: 1.5em;
+}
+
+/*--------- MARGIN & PADDING --------------*/
+.m-auto{
+    margin: auto;
+}
+.m-block{
+    margin-block: 1em;
+}
+.m-inline{
+    margin-inline: .5em;
+}
+.m-0{
+    margin: 0;
+}
+.m-1{
+    margin: 0.25em;
+}
+.m-2{
+    margin: 0.5em;
+}
+.m-3{
+    margin: 0.75em;
+}
+.m-4{
+    margin: 1em;
+}
+.m-5{
+    margin: 1.25em;
+}
+.m-6{
+    margin: 1.5em;
+}
+.m-8{
+    margin: 2em;
+}
+.m-10{
+    margin: 2.5em;
+}
+
+/*----- Padding -------*/
+.p-0{
+    padding: 0;
+}
+.p-block{
+    padding-block: .5em;
+}
+.p-inline{
+    padding-inline: 1.5em;
+}
+.p-1{
+    padding: 0.25em;
+}
+.p-2{
+    padding: 0.5em;
+}
+.p-3{
+    padding: 0.75em;
+}
+.p-4{
+    padding: 1em;
+}
+.p-5{
+    padding: 1.25em;
+}
+.p-6{
+    padding: 1.5em;
+}
+.p-8{
+    padding: 2em;
+}
+.p-10{
+    padding: 2.5em;
+}
+
+/*--------- COLORS -----------*/
+.bg-light{
+    background: var(--light-color);
+}
+.bg-dark{
+    background: var(--dark-color);
+}
+.bg-accent{
+    background: var(--accent-color);
+}
+.bg-transparent{
+    background: transparent;
+}
+.color-60{
+    color: var(--light-color);
+}
+.color-30{
+    color: var(--dark-color);
+}
+.color-10{
+    color: var(--accent-color);
+}
+
+/*--------- BORDERS -----------*/
+.border-1{
+    border-radius: .25em;
+}
+.border-rounded{
+    border-radius: 50%;
+}
+.border-colored{
+    border: 1px solid var(--light-color);
+}
+.border-invisible{
+    border: 1px solid transparent;
+}
+
+/*--------- CUSTOM STYLING -----------*/
+
+body{
+    padding: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: repeating-linear-gradient(to right, #2f6290, #1a8599);
+}
+.container{
+    font-family: var(--f-family);
+    max-width: 400px;
+    position: relative;
+    border-top: 6px solid #fff;
+    overflow: hidden;
+    background: var(--light-color);
+    box-shadow: 0px 0px 12px 3px var(--dark-color);
+}
+header{
+    background: url(https://images.pexels.com/photos/2377965/pexels-photo-2377965.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #529cb8;
+    background-blend-mode: multiply;
+}
+header img{
+    width: 7em;
+    height: 7em;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    top: 3em;
+    border:5px solid #6dc2d6 ;
+}
+.description{
+    padding-inline: .8em;
+    background: #eefafa;
+    padding-block: 2em;
+}
+.wrapper{
+    max-height: 15em !important;
+    padding: .8em;
+    transition: all .2s ease;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+button{
+    width: 100%;
+    padding-block: 1.2em;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    font-family: var(--f-family);
+    cursor: pointer;
+}
+div.outer{
+    max-width: 100%;
+    background: aliceblue;
+    height: .88em;
+    border-radius: .5em;
+    margin-block: .5em;
+    overflow: hidden;
+    box-shadow: 0px 0px 12px .5px var(--accent-color);
+}
+.advert div.inner{
+    max-width: 50%;
+}
+.events div.inner{
+    max-width: 76%;
+}
+.fashion div.inner{
+    max-width: 88%;
+}
+div.inner{
+    background: repeating-linear-gradient(to right, #2f6492, var(--accent-color));
+    height: 100%;
+}
+.hide{
+    display: none !important;
+}
+.is-active{
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-500) !important;
+    background: #eff9f8;
+    padding: .4em;
+    transition: all .4s ease-in-out;
+    border-radius: .25em;
+}
+#portfolio{
+    background: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 5em;
+    grid-auto-flow: dense;
+    gap: .24em;
+}
+#portfolio img{
+    object-fit: contain;
+    cursor: pointer;
+}
+.vertical{  
+    grid-row: span 2;
+}
+.horizontal{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.contact{
+    width: 100%;
+    height: 8em;
+    position: absolute;
+    bottom: 8em;
+    left: 100em;
+    transition: all .3s ease-in-out;
+    background: wheat;
+    border-radius: .5em;
+}
+.contact-active{
+    left: 0;
+}
