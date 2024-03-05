@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>iCodeThis | Job Post</title>
+        <meta name="description" content="Job Post Challenge #065">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <div id="jobHomePage" class="job-homepage center-vertical border-1 bg-light">
+            <header class="text-right p-1 fs-xbold color-60">
+                <i class="fa-solid fa-ellipsis"></i>
+            </header>
+            <div class="flex-rows gap ai-center">
+                <img src="https://media.istockphoto.com/id/1205821116/vector/owl-logo-vector-black.jpg?s=612x612&w=0&k=20&c=Hb4hiy-f_e63nGN-C4iW1qynCGt-yUH27vqW-8jI4a4=" alt="company logo">
+                <div class="txt">
+                    <h2 class="fw-600 fs-sbold">Product Designer at Wisely</h2>
+                    <span class="location color-10 fs-medium">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Austin, TX or Remote
+                    </span>
+                    <div class="btn-wrap flex-rows gap m-block">
+                        <button class="bg-transparent border-colored fw-500 fs-regular color-60" id="saveBtn">Save</button>
+                        <button class="bg-dark color-30 border-invisible fs-regular fw-500" id="applyBtn">Apply</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-rows m-block wrap p-3 bg-accent border-1">
+                <div class="flex-100 p-1">
+                    <h2 class="upper fs-medium fw-500 color-60">Job</h2>
+                    <ul role="list">
+                        <li class="fw-500 fs-regular color-60">7/9 skills match</li>
+                        <li class="fw-500 fs-regular color-60">32 applicants</li>
+                    </ul>
+                </div>
+                <div class="flex-100 p-1">
+                    <h2 class="upper fs-medium fw-500 color-60">Company</h2>
+                    <ul role="list">
+                        <li class="fw-500 fs-regular color-60">51 - 200 employees</li>
+                        <li class="fw-500 fs-regular color-60">Computer software</li>
+                    </ul>
+                </div>
+                <div class="flex-100 p-1">
+                    <h2 class="upper fs-medium fw-500 color-60">Connections</h2>
+                    <p class="fw-500 fs-regular color-60">You don't have connections at Wisely</p>
+                </div>
+            </div>
+            <button class="top block m-auto p-block p-inline bg-transparent border-invisible fs-sbold fw-500 color-60" id="viewJobBtn">View Job Post</button>
+        </div>
+        <form id="jobApplication" class="bg-light center-vertical hide">
+            <header class="text-right p-inline">
+                <i id="closeBtn" class="fa-solid fa-x"></i>
+            </header>
+            <div id="formDetails" class="form-wrapper hide">
+                <div class="form-header">
+                    <img class="m-auto" src="https://media.istockphoto.com/id/1205821116/vector/owl-logo-vector-black.jpg?s=612x612&w=0&k=20&c=Hb4hiy-f_e63nGN-C4iW1qynCGt-yUH27vqW-8jI4a4=" alt="">
+                    <h1 class="text-center ff-logo fs-bold">Wisely Design Company</h1>
+                </div>
+                <h2 class="fs-sbold fw-500 text-center">Thank you for your interest in Wisely</h2>
+                <p class="fs-thin fw-600 text-center">We're looking for a talented and passionate product designer to join our team.</p>
+                <fieldset class="personal-details flex-column">
+                    <span>
+                        <label for="fname">First Name:</label>
+                        <input type="text" name="fname" id="fname" required>
+                    </span>
+                    <span>
+                        <label for="lname">Last Name:</label>
+                        <input type="text" name="lname" id="lname" required>
+                    </span>
+                    <span>
+                        <label for="email">Email Address:</label>
+                        <input type="email" name="email" id="email" required>
+                    </span>
+                    <span>
+                        <label for="portfolio">Portfolio Link: </label>
+                        <input type="text" name="link" id="portfolio" required>
+                    </span>
+                </fieldset>
+                <fieldset class="personal-experience">
+                    <textarea name="" id="" cols="30" rows="3" placeholder="Briefly describe your experience in product design (years and companies)." required></textarea>
+                </fieldset>
+                <fieldset class="personal-skills">
+                    <h2 class="fs-regular fw-600">Check any of the following skills that apply to you</h2>
+                    <ul role="list">
+                        <li>
+                            <input type="checkbox" name="uiDesign" id="uxdesign">
+                            <label for="uxdesign">User Interface (UI) Design</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="uxDesign" id="uidesign">
+                            <label for="uidesign">User Experience (UX) Design</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="userResearch" id="uresearch">
+                            <label for="uresearch">User Research</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="prototyping" id="prototyping">
+                            <label for="prototyping">Prototyping</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <button type="submit" id="submitBtn">Submit application</button>
+            </div>
+            <div id="popUp" class="hide">
+                <h2 class="text-center fs-sbold lh fw-500 ff-logo text-balance">Thank you for your application! We look forward to meeting you and having you as part of our team. 
+                    <br>
+                    Please submit your resume and any relevant portfolio materials to <a class="color-60" href="">contact@wisely.com</a>
+                </h2>
+            </div>
+        </form>
+        <div id="jobDetails" class="job-details center-vertical bg-light color-60 hide">
+            <header class="text-right p-inline">
+                <i id="closedBtn" class="fa-solid fa-x"></i>
+            </header>
+            <div class="brand">
+                <img class="m-auto" src="https://media.istockphoto.com/id/1205821116/vector/owl-logo-vector-black.jpg?s=612x612&w=0&k=20&c=Hb4hiy-f_e63nGN-C4iW1qynCGt-yUH27vqW-8jI4a4=" alt="Company Logo">
+                <h1 class="text-center ff-logo fs-xbold">Wisely Design Company</h1>
+            </div>
+            <p class="fs-medium">Do you have a passion for creating user-friendly and visually appealing products? Do you thrive in a collaborative environment where your ideas can make a real impact? If so, we want to hear from you!</p>
+            <p class="fs-medium m-block"><strong>Wisely</strong> is seeking a talented <span class="underline fw-600">Product Designer</span> to join our growing team. In this role, you will play a key role in the entire product design lifecycle, from user research and ideation to prototyping and final implementation.</p>
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>
