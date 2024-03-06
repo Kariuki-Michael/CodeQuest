@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>iCodeThis | Login Dark Theme</title>
+        <meta name="description" content="Login dark theme challenge #066">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container flex-rows wrap gap">
+            <div class="form-wrap flex-100 bg-dark p-4 border-1">
+
+                <form id="loginPage" class="login grid gap">
+                    <h1 class="fs-bold m-block text-left">Log in to your account</h1>
+                    <button type="button" class="flex-rows ai-center jc-center bg-accent color-60 border-invisible fw-600 no-wrap">
+                        <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="">
+                        Login in with Google
+                    </button>
+                    <div class="line flex-rows ai-center jc-center gap">
+                        <div></div>
+                        <p class="upper">Or</p>
+                        <div></div>
+                    </div>
+                    <span>
+                        <label class="fs-thin fw-700" for="email">Email address</label>
+                        <input class="border-colored bg-transparent color-60" type="email" name="email" id="email" placeholder="Enter your email address" required>
+                    </span>
+                    <button type="submit" class="p-block m-block border-invisible bg-light color-30 fw-600">Continue</button>
+
+                    <p class="m-block fw-700 fs-thin color-60">Don't have an account? 
+                        <a type="button" class="color-10 deco-none" id="signUpBtn">Sign Up</a>
+                    </p>
+
+                </form>
+
+                <form id="signUpPage" class="sign-up grid gap hide">
+                    <h1 class="fs-bold m-block color-60">Sign Up for an account</h1>
+                    <button type="button" class="flex-rows ai-center jc-center border-invisible fw-600 color-60 bg-accent">
+                        <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="">
+                        Sign Up with Google
+                    </button>
+                    <div class="line flex-rows ai-center jc-center gap">
+                        <div></div>
+                        <p class="upper">Or</p>
+                        <div></div>
+                    </div>
+                    <span>
+                        <label class="fs-thin fw-700" for="namel">Name</label>
+                        <input class="border-colored bg-transparent color-60" type="text" name="uname" id="name" placeholder="Enter your name address" required>
+                    </span>
+                    <span>
+                        <label class="fs-thin fw-700" for="email">Email address</label>
+                        <input class="border-colored bg-transparent color-60" type="email" name="email" id="email" placeholder="Enter your email address" required>
+                    </span>
+                    <button class="m-block color-30 bg-light fw-600 border-invisible" type="submit">Continue</button>
+
+                    <p class="m-block fw-700 fs-thin color-60">Already have an account? 
+                        <a type="button" class="color-10 deco-none" id="loginBtn">Login</a>
+                    </p>
+                </form>
+
+            </div>
+            <div class="text flex-100 m-block">
+                <div class="text-left">
+                    <h2 class="fs-bold lh">Seamless data tiering with Online Archive</h2>
+                    <p class="m-block fw-700 lh">Offload aged data from your cluster to a lower-cost, queryable storage tier. Create an Online Archive to start saving on storage costs.</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js" async defer></script>
+    </body>
+</html>
