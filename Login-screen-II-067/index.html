@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>iCodeThis | Login Screen 2</title>
+        <meta name="description" content="Login Screen 2 Challenge #067">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-wrap">
+                <div class="button-wrap">
+                    <div id="btn"></div>
+                    <button type="button" id="loginButton" class="toggle-btn">Sign In</button>
+                    <button type="button" id="registerButton" class="toggle-btn">Sign Up</button>
+                </div>
+
+                <form id="login" class="input-group">
+                    <div class="input-box">
+                        <input type="text" class="input-field" required="required">
+                         <span class="flex-wrap">
+                            <p>Username</p>
+                            <i class="fa-regular fa-user"></i>
+                         </span>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field password-field" required="required">
+                         <span class="flex-wrap">
+                            <p>Password</p>
+                            <i class="fa-solid fa-lock lock-icon"></i>
+                         </span>
+                    </div>
+                    <div class="flex-rows">
+                        <span>
+                            <input type="checkbox" id="checkbox">
+                            <label for="checkbox">Remember me</label>
+                        </span>
+                        <a href="#">Forgot password</a>
+                    </div>
+                    <button type="submit" class="submit-btn">LOG IN</button>
+                    <div class="line flex-rows jc-center ai-center">
+                        <div></div>
+                        <p>Or</p>
+                        <div></div>
+                    </div>
+                    <button type="submit" class="fb-btn">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        Log In with Facebook
+                    </button>
+                </form>
+
+                <form id="register" class="input-group">
+                    <div class="input-box">
+                        <input type="text" class="input-field" required="required">
+                         <span class="flex-wrap">
+                            <p>Name</p>
+                            <i class="fa-regular fa-user"></i>
+                         </span>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" class="input-field" required="required">
+                         <span class="flex-wrap">
+                            <p>Email</p>
+                            <i class="fa-regular fa-envelope"></i>
+                         </span>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field password-field" required="required">
+                         <span class="flex-wrap">
+                            <p>Password</p>
+                            <i class="fa-solid fa-lock lock-icon"></i>
+                         </span>
+                    </div>
+                    <div class="flex-rows jc-center">
+                        <span>
+                            <input type="checkbox" id="checkbox">
+                            <label for="checkbox">Male</label>
+                        </span>
+                        <span>
+                            <input type="checkbox" id="checkbox">
+                            <label for="checkbox">Female</label>
+                        </span>
+                    </div>
+                    <button type="submit" class="submit-btn">SIGN UP</button>
+                    <div class="line flex-rows jc-center ai-center">
+                        <div></div>
+                        <p>Or</p>
+                        <div></div>
+                    </div>
+                    <button type="button" class="fb-btn">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        Sign Up with Facebook
+                    </button>
+                </form>
+
+            </div>
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>

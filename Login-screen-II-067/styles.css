@@ -1,0 +1,227 @@
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,
+body{
+    height: 100%;
+}
+.flex-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.flex-rows{
+    display: flex;
+    gap: 1em;
+}
+.jc-center{
+    justify-content: center;
+}
+.ai-center{
+    align-items: center;
+}
+body{
+    padding: .5em;
+    background:url(https://images.pexels.com/photos/5232676/pexels-photo-5232676.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.form-wrap{
+    max-width: 400px;
+    margin: 8% auto;
+    height: 640px;
+    position: relative;
+    border-radius: .5em;
+    padding: 1em;
+    background: hsla(0, 0%, 0%, 0.567);
+    overflow: hidden;
+}
+.button-wrap{
+    max-width: 320px;
+    margin: auto;
+    box-shadow: 2px 2px 4px 3px rgba(220, 220, 220, 0.236);
+    border-radius: 1.5em;
+    position: relative;
+    display: flex;
+}
+.toggle-btn{
+    padding-block: 1em;
+    width: 50%;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    color: #f3f6f7;
+    outline: none;
+    position: relative;
+}
+.submit-btn{
+    padding-block: .5em;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border: 2px solid transparent;
+    transition: .5s;
+    cursor: pointer;
+    background: #fda940;
+    color: #f5f8e1;
+}
+.fb-btn{
+    font-size: 1.3rem;
+    padding-block: .5em;
+    border: 2px solid transparent;
+    transition: .5s;
+    cursor: pointer;
+    background: #2f79bc;
+    color: #f7fffe;
+}
+.submit-btn:hover,
+.fb-btn:hover{
+    letter-spacing: .125em;
+    box-shadow: 0px 0px 2px 4px rgba(220, 220, 220, 0.436);
+}
+.fb-btn i{
+    font-size: 1.5rem;
+}
+.line div{
+    width: 5em;
+    height: .14em;
+    background: hsl(189, 91%, 66%);;
+}
+.line p{
+    color: #f7fffe;
+    font-size: 1.2rem;
+}
+.is-active{
+    color: #8cc8c6;
+}
+#btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 1.5em;
+    background: #ffffff;
+    transition: .5s;
+}
+.input-group{
+    top: 10em;
+    position: absolute;
+    width: 320px;
+    margin: auto;
+    transition: .5s;
+    display: grid;
+    gap: 1.8em;
+}
+.input-box{
+    position: relative;
+    max-width: 320px;
+}
+.input-box .input-field{
+    width: 100%;
+    font-size: 1.2rem;
+    padding-block: .5em .25em;
+    padding-inline: .6em 0;
+    background: transparent;
+    outline: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid black;
+    color: #f3f6f7;
+}
+.input-box span{
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #f3f6f7;
+}
+.input-box span p{
+    transition: .5s;
+    font-size: 1.2rem;
+}
+.input-box span i{
+    font-size: 1.2rem;
+    margin-block-end: .2em;
+    transition: .5s;
+}
+.input-box input:valid~span p,
+.input-box input:focus~span p{
+    transform: translateY(-150%);
+    color: hsl(189, 91%, 66%);
+    text-transform: uppercase;
+    font-size: .875rem;
+}
+.input-box input:valid~span i,
+.input-box input:focus~span i{
+    color: hsl(189, 91%, 66%);
+}
+.lock-icon{
+    cursor: pointer;
+    pointer-events: all;
+}
+label{
+    color: #f5f8e1;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+a{
+    font-size: 1.1rem;
+    color: #f7fffe;
+    transition: .5s;
+}
+a:hover{
+    color: hsl(189, 91%, 66%);
+    letter-spacing: .125em;
+}
+#login{
+    left: 40px;
+}
+#register{
+    left: 480px;
+}
+#checkbox{
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+}
+@media (max-width: 426px){
+    .container{
+        max-width: 100%;
+    }
+    .form-wrap{
+        max-width: 100%;
+        margin: 12% auto;
+        padding: 1.5em .5em;
+    }
+    .button-wrap{
+        width: 100%;
+    }
+    .input-group{
+        width: 80%;
+        margin-left: -.456em;
+    }
+    .input-box{
+        max-width: 100%;
+    }
+    .input-box span{
+        width: 100%;
+    }
+    .submit-btn{
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    .fb-btn{
+        font-size: 1.1rem;
+    }
+}
