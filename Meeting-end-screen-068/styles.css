@@ -1,0 +1,338 @@
+/*-------------- RESETS ----------------*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+body,
+html {
+    height: 100%;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/*------------- VARIABLES -----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root {
+    --f-family: 'Inter', sans-serif;
+
+}
+
+/*------------- UTILITY CLASSES -----------*/
+
+.grid-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    gap: 0.25em;
+}
+.flex{
+    display: flex;
+    gap: 1em;
+}
+.flex-column{
+    flex-direction: column;
+}
+.jc-center{
+    justify-content: center;
+}
+.ai-center{
+    align-items: center;
+}
+.pulse {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.025);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.pulse-bg {
+    animation: pulse-bg 2s infinite;
+}
+@keyframes pulse-bg {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+.hide{
+    display: none;
+}
+/*---------- CUSTOM STYLING -------------*/
+body {
+    padding: 0.5em;
+    background: #2b4170;
+}
+.container {
+    font-family: var(--f-family);
+    max-width: 768px;
+    height: 640px;
+    border-radius: 0.25em;
+    margin-inline: auto;
+    padding: 1em;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+button{
+    padding: .5em 1em;
+    border: 2px solid transparent;
+    background: #3b5a9f;
+    color: #b2c7e8;
+    border-radius: .5em;
+    cursor: pointer;
+    transition: .5s;
+}
+button:hover{
+    letter-spacing: .05em;
+    box-shadow: 0px 0px 6px 2px #b2c7e8;
+}
+.active-btn{
+    background: transparent !important;
+    border: 2px solid #3d5b9f !important;
+}
+.card{
+    position: absolute;
+    width: 96%;
+}
+#home-page{
+    text-align: center;
+    height: auto;
+    padding-block: 2em;
+    left: 800px;
+    transition: .5s;
+}
+#home-page h1{
+    font-size: 3.5em;
+    line-height: 1.2em;
+    color: #b2c7e8;
+}
+#home-page h2{
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+    letter-spacing: .05em;
+    color: #b2c7e8;
+}
+#home-page .btn-wrap{
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+    margin-top: 2em;
+}
+#home-page .btn-wrap button{
+    width: 10em;
+}
+#end-screen{
+    max-width: 640px;
+    margin:  0 auto;
+    padding: 1em;
+    height: auto;
+    transition: .5s;
+}
+#end-screen h2{
+    text-align: left;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #b2c7e8;
+}
+label{
+    color: #b2c7e8;
+}
+#end-screen .btn-wrap{
+    margin-block: .5em 1em;
+    display: flex;
+    gap: .5em;
+}
+#end-screen .btn-wrap button{
+    width: 14em;
+}
+.ratings-wrap ul{
+    background: #253a68;
+    max-width: 600px;
+    padding-block: 1.5em;
+    border-radius: .25em;
+}
+.ratings-wrap ul h3{
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-left: 1.5em;
+    line-height: 1.8em;
+    color: #b2c7e8;
+}
+.ratings-wrap li i{
+    font-size: 3rem;
+    color: #fee378;
+    border: 1px solid transparent;
+    padding: .5em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.is-active{
+    border-color: #b2c7e8 !important;
+    background: #364c80;
+}
+#join-meeting{
+    height: 100%;
+    padding: .5em 0;
+    text-align: center;
+    right: 800px;
+    transition: .5s;
+    padding: .5em;
+
+}
+#join-meeting h2{
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #b2c7e8;
+}
+#join-meeting button{
+    display: block;
+    margin-left: auto;
+    margin-block: 1em;
+}
+.meeting-list li {
+    background: #253a68;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    padding: .5em;
+}
+.meeting-list img {
+    width: 7.5em;
+    height: 7.5em;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 12px 2px hsl(221, 45%, 20%);
+}
+.meeting-list i {
+    font-size: 1.5rem;
+    color: hsl(217, 54%, 50%);
+    display: block;
+    margin-left: auto;
+}
+.active-speaker{
+    color: #b2c7e8 !important;
+}
+@media (max-width: 640px){
+    .container{
+        max-width: 100%;
+        top: 2em;
+        transform: translateY(0);
+    }
+    #end-screen{
+        max-width: 100%;
+    }
+    .ratings-wrap li i{
+        font-size: 1.5rem;
+    }
+    .flex{
+        gap: .5em;
+    }
+    .btn-wrap{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    button{
+        width: 100%;
+    }
+    #end-screen h2{
+        text-align: center;
+    }
+    #join-meeting{
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+}
+@media (max-width: 400px){
+    #home-page h1{
+        font-size: 2.5em;
+    }
+    #end-screen{
+        max-width: 100%;
+    }
+    .ratings-wrap li i{
+        font-size: 1rem;
+    }
+    label{
+        font-size: .6rem;
+    }
+}

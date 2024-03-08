@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>iCodeThis | Meeting End Screen</title>
+        <meta name="description" content="Meeting End Screen Challenge #068">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="card" id="home-page">
+                <h1>Connect. Collaborate. Achieve.</h1>
+                <h2>Your all-in-one platform for productive meetings</h2>
+                <div class="btn-wrap">
+                    <button type="button" class="active-btn"  id="join-btn">Join Meeting</button>
+                    <button type="button" id="end-screen-btn">End Screen</button>
+                </div>
+            </div>
+
+            <div class="card" id="end-screen">
+                <h2>You left the meeting</h2>
+                <div class="btn-wrap">
+                    <button class="active-btn" type="button" id="rejoin-btn">Rejoin</button>
+                    <button type="button" id="homepage-btn">Return to home page</button>
+                </div>
+                <div class="ratings-wrap">
+                    <ul role="list" class="">
+                        <h3>How was the audio and video?</h3>
+                        <div class="flex jc-center">
+                            <li class="flex flex-column jc-center ai-center">
+                                <i class="fa-regular fa-face-sad-tear" id="rating-icon"></i>
+                                <label>Very Bad</label>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-face-meh" id="rating-icon"></i>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-face-rolling-eyes" id="rating-icon"></i>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-face-smile is-active" id="rating-icon"></i>
+                            </li>
+                            <li class="flex flex-column jc-center ai-center">
+                                <i class="fa-regular fa-face-laugh-squint" id="rating-icon"></i>
+                                <label>Very Good</label>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="card" id="join-meeting">
+                <h2 class="pulse-bg">Meeting in Progress</h2>
+                <button type="button" id="leave-btn">Exit Meeting</button>
+                <ul class="grid-wrap meeting-list" role="list">
+                    <li>
+                        <img class="pulse" src="https://images.pexels.com/photos/1462980/pexels-photo-1462980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="meeting-profile">
+                        <i class="fa-solid fa-microphone pulse-bg active-speaker"></i>
+                    </li>
+                    <li>
+                        <img src="https://images.pexels.com/photos/819530/pexels-photo-819530.jpeg?auto=compress&cs=tinysrgb&w=600" alt="meeting-profile">
+                        <i class="fa-solid fa-microphone-slash"></i>
+                    </li>
+                    <li>
+                        <img src="https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=600" alt="meeting-profile">
+                        <i class="fa-solid fa-microphone-slash"></i>
+                    </li>
+                    <li>
+                        <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600" alt="meeting-profile">
+                        <i class="fa-solid fa-microphone-slash"></i>
+                    </li>
+                    <li>
+                        <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=600" alt="meeting-profile">
+                        <i class="fa-solid fa-microphone-slash"></i>
+                    </li>
+                    <li>
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600" alt="meeting-profile">
+                        <i class="fa-solid fa-microphone-slash"></i>
+                    </li>
+                    <li>
+                        <img src="https://images.pexels.com/photos/1484801/pexels-photo-1484801.jpeg?auto=compress&cs=tinysrgb&w=600" alt="meeting-profile">
+                        <i class="fa-solid fa-microphone-slash"></i>
+                    </li>
+                    <li>
+                        <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=600" alt="meeting-profile">
+                        <i class="fa-solid fa-microphone-slash"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>
