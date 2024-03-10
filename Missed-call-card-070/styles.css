@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,
+body{
+    min-height: 100vh;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5em;
+}
+.card{
+    flex: 1 0 0;
+    max-width: 400px;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 2px 2px 12px 4px gray;
+    border-radius: .5em;
+    padding: 2em 1em;
+}
+.card header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card header i{
+    font-size: 1.25rem;
+}
+.card header i.fa-xmark{
+    border: 2px solid #adb0bc;
+    padding: .225em;
+    border-radius: 50%;
+    color: #adb0bc;
+    cursor: pointer;
+}
+.card header h2{
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.card header .text{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+.card .contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-block: 1em;
+}
+.contact img{
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: 5px solid hsl(218, 38%, 94%);
+    object-fit: cover;
+}
+.contact .txt-wrap{
+    display: grid;
+    gap: .25em;
+}
+.card .btn-wrap{
+    max-width: 100%;
+    display: flex;
+    gap: 1em;
+}
+.card .btn-wrap button{
+    width: 50%;
+    padding-block: .8em;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid transparent;
+    border-radius: .25em;
+    cursor: pointer;
+    transition: .5s;
+}
+.card .btn-wrap button:hover{
+    letter-spacing: .025em;
+    font-weight: 600;
+    background: transparent;
+    border-color: hsl(158, 71%, 37%);
+    color: hsl(0, 0%, 50%);
+    transform: scaleX(.8);
+}
+.small{
+    font-size: .8rem;
+}
+.red{
+    color: hsl(6, 54%, 59%);
+}
+.green{
+    background: hsl(158, 71%, 37%);
+    color: #fcfefd;
+}
+.box-shadow{
+    box-shadow: 2px 4px 4px 2px #6cbeb7;
+}
+.border{
+    border-color: hsl(240, 2%, 49%) !important;
+    background: transparent;
+    color: #7b7b81;
+}
+@media (max-width: 350px){
+    .container{
+        max-width: 100%;
+    }
+    .btn-wrap{
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+    }
+    button{
+        width: 100%;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
