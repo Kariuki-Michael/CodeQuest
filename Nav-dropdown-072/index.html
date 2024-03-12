@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>iCodeThis | Nav Dropdown</title>
+        <meta name="description" content="Nav Dropdown Challenge #072">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="menu-toggle"></div>
+            <nav role="navigation" class="navigation-bar">
+                <ul class="nav-items" role="list">
+                    <li class="prime-list"><a class="link-items" data-value="Product" href="#">Product</a></li>
+                    <li class="prime-list"><a class="link-items" data-value="Blog" href="#">Blog</a></li>
+                    <li class="prime-list dropdown"><a class="link-items is-active" data-value="Connect" href="#">Connect</a>
+                        <ul class="dropdown-menu" role="list">
+                            <li>
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <a data-value="Facebook" href="#">Facebook</a>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-x-twitter"></i>
+                                <a data-value="Twitter" href="#">Twitter</a>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-tumblr"></i>
+                                <a data-value="Tumblr" href="#">Tumblr</a>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-youtube"></i>
+                                <a data-value="Youtube" href="#">Youtube</a>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-pinterest-p"></i>
+                                <a data-value="Pinterest" href="#">Pinterest</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="prime-list"><a class="link-items" data-value="Plug-ins" href="#"> Plug-ins</a></li>
+                </ul>
+            </nav>
+        </header>
+        <script src="script.js" async defer></script>
+    </body>
+</html>
