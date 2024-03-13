@@ -1,0 +1,338 @@
+
+/*----------- CSS RESETS -------------*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+body, html{
+    height: 100%;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+/* ------- UTILITY CLASSES ---------*/
+.inline-block{
+    display: inline-block;
+}
+.hidden{
+    display: none;
+}
+.block{
+    display: block;
+}
+.inline{
+    display: inline;
+}
+.flex-rows{
+    display: flex;
+}
+.flex-cols{
+    display: flex;
+    flex-direction: column;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-nowrap{
+    flex-wrap: nowrap;
+}
+.flex-100{
+    flex: 1 0 0;
+}
+.ai-center{
+    align-items: center;
+}
+.ai-start{
+    align-items: flex-start;
+}
+.ai-end{
+    align-items: flex-end;
+}
+.jc-space-btn{
+    justify-content: space-between;
+}
+.jc-around{
+    justify-content: space-around;
+}
+.jc-evenly{
+    justify-content: space-evenly;
+}
+.jc-center{
+    justify-content: center;
+}
+.jc-start{
+    justify-content: flex-start;
+}
+.jc-end{
+    justify-content: flex-end;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+.gap{
+    gap: 1em;
+}
+/* ----------- CUSTOM CLASSES -------------*/
+body{
+    padding: .5em;
+    background: #f5f4fe;
+}
+.container{
+    max-width: 1024px;
+    margin-inline: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 500;
+    font-family: 'Space Mono', monospace;
+    color: #1d1e32;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.nav-components{
+    max-width: 475px;
+    box-shadow: -2px 8px 4px 4px #dee3f5;
+    background: #fefffe;
+    border-radius: .5em;
+    padding: 1em 1em;
+    overflow: hidden;
+    position: relative;
+    bottom: 8em;
+}
+.nav-components ul li{
+    position: relative;
+    font-size: 1.125rem;
+    margin: .25em;
+    padding: .25em;
+    cursor: pointer;
+}
+.nav-components ul li::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #1d1e32;
+    position: absolute;
+    bottom: -1em;
+    left: 0;
+    opacity: 0;
+    transition: all .2s ease-in;
+}
+.nav-components ul li:hover::after{
+    bottom: 0;
+    opacity: 1;
+}
+.search-components{
+    max-width: 400px;
+    box-shadow: -2px 8px 4px 4px #dee3f5;
+    background: #fefffe;
+    padding: 1em 1.5em;
+    border-radius: .5em;
+    margin-block: 1em;
+    position: relative;
+    right: 2em;
+}
+.search-components h2{
+    font-size: 1.45rem;
+}
+.search-components ul li{
+    background: #f5f4ff;
+    border: 2px solid #cdd8fe;
+    margin: .5em .15em;
+    padding: .5em .8em;
+    border-radius: 1.5em;
+    font-size: 0.895rem;
+}
+.menu-components{
+    max-width: 350px;
+    padding: 1em;
+    box-shadow: -2px 8px 4px 4px #dee3f5;
+    background: #fefffe;
+    border-radius: .5em;
+    position: relative;
+    bottom: 6em;
+}
+.menu-components i{
+    font-size: 1.5rem;
+}
+.menu-components label{
+    font-size: 1.125rem;
+}
+.menu-toggle{
+    position: relative;
+    left: 2em;
+    width: 25px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-toggle::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: .125em;
+    background: #1d1e32;
+    transform: translateY(-12px);
+    box-shadow: 0 12px #1d1e32;
+    transition: .5s;
+}
+.menu-toggle::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #1d1e32;
+    border-radius: .125em;
+    transform: translateY(12px);
+    transition: .5s
+}
+.menu-toggle:hover::before{
+    transform: rotate(45deg);
+    box-shadow: 0 0px #1d1e32;
+}
+.menu-toggle:hover::after{
+    transform: rotate(315deg);
+}
+.product-components{
+    max-width: 400px;
+    box-shadow: -2px 8px 4px 4px #dee3f5;
+    background: #fefffe;
+    padding: 2em .5em;
+    margin-block: 1em;
+    border-radius: .5em;
+}
+.icon{
+    font-size: 2rem;
+}
+.bt-wrap{
+    padding: 1.5em 1em;
+    border-radius: .5em;
+    transition: background .2s ease-in;
+    cursor: pointer;
+}
+.bt-wrap label{
+    font-size: 1.125rem;
+}
+.bt-wrap:hover{
+    background: #cfcaff;
+}
+@media(max-width: 768px){
+    .container{
+        max-width: 100%;
+    }
+    .nav-components{
+        margin: 1em auto;
+        bottom: 0;
+    }
+    .search-components{
+        right: 0;
+        margin: 1em auto;
+    }
+    .menu-components{
+        bottom: 0;
+        margin: 1em auto;
+    }
+    .product-components{
+        margin: 1em auto;
+    }
+}
+@media(max-width: 475px){
+    .container{
+        max-width: 100%;
+        align-items: flex-start;
+        top: 0;
+        transform: translateY(0);
+    }
+    .nav-components{
+        max-width: 100%;
+        padding: 1em .5em;
+    }
+    .nav-components ul li{
+        font-size: .95rem;
+    }
+    .search-components{
+        max-width: 100%;
+        text-align: center;
+    }
+    .search-components ul li{
+        font-size: .65rem;
+        font-weight: 600;
+    }
+    .menu-components{
+        max-width: 100%;
+    }
+    .product-components{
+        max-width: 100%;
+    }
+    .gap{
+        gap: .65em;
+    }
+}
