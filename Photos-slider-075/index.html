@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>iCodeThis | Photos Slider</title>
+        <meta name="description" content="Photo Sliders Challenge #075">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="splide" role="group" aria-label="Photo slider" id="photo-slider">
+                <header>
+                    <h2>Recently uploaded photos</h2>
+                    <button type="button" id="view-all-btn">View all</button>
+                </header>
+                <div class="splide__track">
+                      <ul class="splide__list">
+                          <li class="splide__slide">
+                            <img data-splide-lazy = "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                        </li>
+                          <li class="splide__slide">
+                            <img data-splide-lazy= "https://images.pexels.com/photos/1820563/pexels-photo-1820563.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                        </li>
+                          <li class="splide__slide">
+                            <img data-splide-lazy= "https://images.pexels.com/photos/2105416/pexels-photo-2105416.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                        </li>
+                          <li class="splide__slide">
+                            <img data-splide-lazy= "https://images.pexels.com/photos/321552/pexels-photo-321552.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                        </li>
+                          <li class="splide__slide">
+                            <img data-splide-lazy= "https://images.pexels.com/photos/1426827/pexels-photo-1426827.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                        </li>
+                          <li class="splide__slide">
+                            <img data-splide-lazy= "https://images.pexels.com/photos/610293/pexels-photo-610293.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                        </li>
+                          <li class="splide__slide">
+                            <img data-splide-lazy= "https://images.pexels.com/photos/3571576/pexels-photo-3571576.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                        </li>
+                          <li class="splide__slide">
+                            <img data-splide-lazy= "https://images.pexels.com/photos/450441/pexels-photo-450441.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                        </li>
+                          <li class="splide__slide">
+                            <img data-splide-lazy= "https://images.pexels.com/photos/1666529/pexels-photo-1666529.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                        </li>
+                          <li class="splide__slide">
+                            <img data-splide-lazy= "https://images.pexels.com/photos/1262803/pexels-photo-1262803.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                        </li>
+                      </ul>
+                </div>
+              </div>
+              <div class="show-all hidden" id="image-gallery">
+                <div class="header">
+                    <h2>Some of your memorable moments</h2>
+                    <i class="fa-regular fa-circle-xmark" id="close-btn"></i>
+                </div>
+                <ul role="list">
+                    <li><img src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+                    <li><img src="https://images.pexels.com/photos/1820563/pexels-photo-1820563.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+                    <li><img src="https://images.pexels.com/photos/2105416/pexels-photo-2105416.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+                    <li><img src="https://images.pexels.com/photos/321552/pexels-photo-321552.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+                    <li><img src="https://images.pexels.com/photos/1426827/pexels-photo-1426827.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+                    <li><img src="https://images.pexels.com/photos/610293/pexels-photo-610293.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+                    <li><img src="https://images.pexels.com/photos/3571576/pexels-photo-3571576.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+                    <li><img src="https://images.pexels.com/photos/450441/pexels-photo-450441.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+                    <li><img src="https://images.pexels.com/photos/1666529/pexels-photo-1666529.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+                    <li><img src="https://images.pexels.com/photos/1262803/pexels-photo-1262803.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+                </ul>
+              </div>
+        </div>
+        <script src="script.js" async defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
+    </body>
+</html>

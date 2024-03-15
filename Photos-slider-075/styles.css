@@ -1,0 +1,131 @@
+
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ul[role="list"]{
+    list-style: none;
+}
+html,
+body{
+    min-height: 100vh;
+}
+.hidden{
+    display: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background: #b2e4fb;
+}
+.container{
+    flex: 1 0 0;
+    max-width: 900px;
+    padding: 2em 1em;
+    background: #fefeff;
+    box-shadow: -16px 20px 32px 8px hsl(200, 57%, 47%);
+    border-radius: .5em;
+    color: #4e545a;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 1em;
+}
+header h2{
+    text-transform: uppercase;
+    font-size: 1.35rem;
+}
+header button{
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    padding: .5em;
+    background: transparent;
+    color: #30a4c6;
+    cursor: pointer;
+    transition: .5s;
+}
+header button:hover{
+    border-color: #30a4c6;
+    color: #4e545a;
+    border-radius: .25em;
+}
+.splide__slide{
+    padding-block: 1em;
+}
+.splide__slide img{
+    width: 100%;
+    height: 12em;
+    object-fit: cover;
+    border-radius: .5em;
+    box-shadow: 1.2px 4px 12px 1.2px hsl(200, 97%, 17%);
+    filter: contrast(.5);
+    cursor: pointer;
+    transition: .5s;
+}
+.splide__slide img:hover{
+    filter: contrast(1);
+}
+.show-all .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1em;
+    padding-inline: .5em;
+}
+.show-all h2{
+    font-size: 1.8rem;
+}
+.show-all i{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.show-all > ul{
+    padding: .5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9.2em, 1fr));
+    gap: .5em;
+    justify-items: center;
+    align-content: center;
+}
+.show-all img{
+    width: 9.6em;
+    height: 9.6em;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: .5em;
+    transition: .5s;
+    filter: contrast(.5);
+}
+.show-all img:is(:hover){
+    transform: skew(-5deg);
+    filter: contrast(1);
+}
+@media (max-width: 640px){
+    .container{
+        max-width: 100%;
+    }
+    header h2{
+        font-size: 1rem;
+    }
+    header button{
+        font-size: 1rem;
+    }
+}
+@media(max-width: 475px){
+    header h2{
+        font-size: .8rem;
+    }
+    header button{
+        font-size: .875rem;
+    }
+}
