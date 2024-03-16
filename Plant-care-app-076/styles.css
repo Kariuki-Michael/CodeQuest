@@ -1,0 +1,184 @@
+
+
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body,
+html{
+    min-height: 100vh;
+}
+img{
+    object-fit: cover;
+}
+
+body{
+    padding: .5em;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #f2f6f7, #d0efea, #f2f6f7);
+    display: flex;
+    align-items: center;
+}
+.container{
+    flex: 1 0 0;
+    font-family: sans-serif;
+    max-width: 400px;
+    position: relative;
+    margin-inline: auto;
+    aspect-ratio: 2/4;
+    overflow: hidden;
+    box-shadow: 2px 4px 24px 4px rgba(0,0,0,0.2),
+     4px 8px 24px 4px #afc7c7;
+}
+.card{
+    aspect-ratio: 1/2;
+    width: 100%;
+    position: absolute;
+    border-radius: .5em;
+    inset: 0;
+    transition: .5s;
+}
+#landing{
+    background-image: url(https://img.freepik.com/free-photo/palm-tree-house-plant-pot_53876-125837.jpg?w=740);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-blend-mode: soft-light;
+    background-color: hsla(0, 0%, 99%, 0.589);
+    padding: 1em 2em;
+}
+#landing h1{
+    font-size: 4rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #00424a;
+}
+#landing p{
+    font-size: 1.105rem;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 5em;
+    color: hsl(180, 6%, 16%);
+}
+#landing .btn-wrap{
+    display: grid;
+    gap: 1em;
+    position: relative;
+    top: 32%;
+}
+#landing button{
+    width: 100%;
+    font-size: 1.225rem;
+    font-weight: 500;
+    padding-block: .5em;
+    border: 2px solid transparent;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: .5s;
+}
+button#signIn-btn{
+    background: linear-gradient(to right, #4dcf8f, #5fbf66);
+    color: #f3fffa;
+}
+button#login-btn{
+    background: transparent;
+    color: #374134;
+}
+button#login-btn:hover{
+    border-color: #4dcf8f;
+}
+#menu{
+    left: 50em;
+    overflow-x: hidden;
+}
+#menu header{
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    padding: 1em .8em;
+} 
+#menu header i{
+    font-size: 1.6rem;
+}
+#menu header h2{
+    font-size: 1.55rem;
+    color: #00424a;
+}
+#menu .img-wrap{
+    display: flex;
+    justify-content: center;
+    gap: .64em;
+    margin-block: 4em;
+}
+#menu img{
+    width: 12em;
+    height: 12em;
+    object-fit: cover;
+    border-radius: .5em;
+    box-shadow: 1px 4px 2px 4px rgba(0,0,0,0.2),
+    inset 0px 0px 6.4px 4px rgba(0,0,0,0.32);
+    transform: perspective(1000px);
+}
+#menu img.small{
+    transform: translateZ(-7.2em) scale3d(.9, .9, .9);
+    transform-style: preserve-3d;
+}
+#menu img.large{
+    transform: translateZ(4em);
+    transform-style: preserve-3d;
+}
+#menu .details{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1em;
+}
+#menu .details h3{
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #2f7d4f;
+}
+#menu .details label{
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: #434b4c;
+}
+#menu .activity{
+    position: relative;
+    top: 30%;
+    padding: 1em;
+    font-size: 1.25rem;
+}
+#menu .activity i{
+    color: #2f7d4f;
+    transition: .5s;
+}
+#menu .activity:hover  i{
+    margin-left: .5em;
+}
+#menu .activity label{
+    color: #434b4c;
+    cursor: pointer;
+    transition: .5s;
+}
+#menu .activity:hover label{
+    color: #00424a;
+}
+@media (max-width: 375px){
+    body{
+        align-items: flex-start;
+    }
+    .container{
+        aspect-ratio: 1/2;
+        margin-top: 6.4%;
+    }
+    #landing .btn-wrap{
+        top: 10%;
+    }
+    #menu .activity{
+        top: 5%;
+    }
+}
