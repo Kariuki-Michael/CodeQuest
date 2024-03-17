@@ -1,0 +1,116 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    min-height: 100vh;
+}
+ul[role='list'] {
+    list-style: none;
+}
+
+body {
+    padding: 1em;
+    background: linear-gradient(to top right, #6ce9ed, #65aaeb);
+}
+.container {
+    aspect-ratio: 1/2;
+    max-width: 420px;
+    margin-inline: auto;
+    border-radius: 1em;
+    background: #ffffff;
+    box-shadow: 2px 2px 4px 4px #53b9e8, 0px 0px 8px 4px #23576f;
+    font-family: sans-serif;
+}
+.container header {
+    padding: 2em 0.8em;
+    border-bottom: 2px solid gray;
+}
+.container header h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #6d7778;
+}
+.container form {
+    padding: 1em 1.2em;
+    margin-top: 3.2em;
+}
+.container form ul {
+    display: grid;
+    gap: 0.8em;
+}
+.container form h2 {
+    font-size: 1.225rem;
+    font-weight: 500;
+    margin-bottom: 1em;
+    color: #4d5957;
+}
+.container form input[type='radio'] {
+    width: 1.6em;
+    height: 1.6em;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.container form label {
+    font-size: 1.225rem;
+    line-height: 1.6;
+    color: #7e8784;
+}
+.container form .btn-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.5em;
+}
+.container form button {
+    padding-block: 0.5em;
+    font-size: 1.225rem;
+    border-radius: 0.5em;
+    border: 2px solid transparent;
+    margin-top: 3.2em;
+    transition: 0.5s;
+    cursor: pointer;
+}
+button#submit-btn {
+    width: 70%;
+    text-transform: uppercase;
+    background: #4289fd;
+    color: #ecf2fa;
+}
+button#skip-btn {
+    width: 30%;
+    background: transparent;
+    color: #9ea9a5;
+}
+button#skip-btn:hover {
+    border-color: #4289fd;
+    color: #303030;
+}
+@media (max-width: 400px) {
+    .container {
+        max-width: 100%;
+    }
+    .container header {
+        padding: 1em 0.5em;
+    }
+    .container form {
+        margin-top: 1em;
+    }
+    .container form ul {
+        gap: 0.5em;
+    }
+    .container form label {
+        line-height: 1.2;
+        font-size: 1.105rem;
+    }
+    .container form .btn-wrap {
+        margin-top: 0.5em;
+    }
+    .container form button {
+        font-size: 1.025rem;
+    }
+}
