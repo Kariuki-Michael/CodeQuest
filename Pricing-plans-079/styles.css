@@ -1,0 +1,128 @@
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,
+body{
+    height: 100%;
+}
+ul[role="list"]{
+    list-style: none;
+}
+
+body{
+    padding: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fe;
+}
+.container{
+    flex: 1 0 0;
+    max-width: 768px;
+    background: #ffffff;
+    padding: 1em;
+    font-family: "Jaldi", sans-serif;
+    color: #14152b;
+    box-shadow: 12px 12px 2px -3px hsl(228, 41%, 83%);
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+}
+ul li{
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    gap: .5em;
+    border-left: 2px solid black;
+    padding: 1em .6em;
+}
+ul li:first-child{
+    border-left-color: transparent;
+    align-content: center;
+    justify-items: start;
+    gap: 1em;
+}
+ul li:first-child label{
+    font-size: 1.15rem;
+    margin-left: .25em;
+}
+input[type="radio"]{
+    appearance: none;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    background-color: #ddd;
+    box-shadow: inset 2px 2px 2px -1px #0008,
+    inset -2px -2px 2px -1px #fff8;;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+}
+input[type="radio"]:checked{
+    background: #1b69f5;
+}
+label#pricing{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+button{
+    width: 100%;
+    font-size: 1.125rem;
+    background: #000000;
+    color: #e1e1e1;
+    font-weight: 500;
+    border: 2px solid transparent;
+    padding-block: .4em;
+    border-radius: .5em;
+    cursor: pointer;
+    transition: .5s linear;
+}
+button:hover{
+    color: #000000;
+    background: #e1e1e1;
+    box-shadow: 8px 9.6px 1px 1px hsl(0, 0%, 0%);
+}
+span.link{
+    font-size: 1.25rem;
+}
+span.link a{
+    color: #424550;
+}
+@media(max-width: 640px){
+    .container{
+        box-shadow: 2px 4px 2px 4px rgba(66, 68, 90, 1);
+    }
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+    }
+    ul li{
+        border: 2px solid black;
+        border-left-color: transparent;
+        border-top-color: transparent;
+    }
+}
+@media(max-width: 475px){
+    .grid-container{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1em;
+    }
+    ul li:first-child{
+        grid-template-columns: 1fr 1fr;
+    }
+    ul li:first-child label{
+        font-size: 1.05rem;
+        font-weight: 500;
+    }
+    ul li{
+        border-left-color: transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+    }
+}
