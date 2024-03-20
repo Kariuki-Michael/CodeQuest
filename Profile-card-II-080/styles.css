@@ -1,0 +1,138 @@
+
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html,
+body{
+    min-height: 100vh;
+}
+ul[role="list"]{
+    list-style: none;
+}
+
+:root{
+    --heading-font: "Balthazar", serif;
+    --body-font: "Gantari", sans-serif;
+    --shadow: -1px 8px 26px -5px rgba(66, 68, 90, 1);
+    --background: hsl(225, 73%, 96%);
+    --color-dark: #120b34;
+    --color-light: #ffffff;
+    --color-accent: #2d2459;
+}
+
+body{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+}
+.container{
+    flex: 1 0 0;
+    aspect-ratio: 1/1;
+    max-width: 475px;
+    padding: 1em;
+    color: var(--color-dark);
+    position: relative;
+}
+.container h1{
+    font-family: var(--heading-font);
+    font-size: 2.4rem;
+}
+ul, p, label{
+    font-family: var(--body-font);
+    font-weight: 500;
+}
+.container .profile-card{
+    padding: 1em;
+    border-radius: .5em;
+    box-shadow: var(--shadow);
+    background: var(--color-light);
+    display: grid;
+    justify-items: center;
+    gap: 1em;
+    height: max-content;
+}
+.container .profile-card label.role{
+    font-size: 1.425rem;
+}
+.profile-card ul.icons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    justify-items: center;
+    gap: 1em;
+}
+.profile-card ul.icons li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .56em;
+    border: 1px solid var(--color-dark);
+    width: 7.2em;
+    padding-block: .8em;
+    border-radius: .25em;
+    cursor: pointer;
+}
+.profile-card ul.icons li:hover{
+    box-shadow: var(--shadow);
+    transform: translateY(4px);
+}
+.profile-card ul.icons li i{
+    font-size: 2rem;
+}
+.profile-card ul.icons li p{
+    font-size: 1.125rem;
+}
+.container .profile-card img{
+    width: 8em;
+    height: 8em;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 8px solid var(--background);
+}
+.container .profile-settings{
+    background: var(--color-dark);
+    width: 280px;
+    color: var(--color-light);
+    display: grid;
+    justify-items: center;
+    font-size: 1.325rem;
+    padding: .5em;
+    border-radius: .25em;
+    z-index: 1;
+    position: absolute;
+    left: 92%;
+    top: 40%;
+}
+.active{
+    background: var(--color-accent);
+}
+.container .profile-settings ul li{
+    border: 1px solid var(--color-light);
+    padding: .45em .5em;
+    margin-block: .25em;
+    border-radius: .25em;
+}
+@media(max-width: 965px){
+    .container .profile-settings{
+        left: 0;
+    }
+}
+@media(max-width: 420px){
+    .container{
+        max-width: 100%;
+        aspect-ratio: 1/2;
+    }
+    .profile-card ul.icons{
+        grid-template-columns: 1fr;
+    }
+    .container .profile-settings{
+        top: 10%;
+    }
+}
