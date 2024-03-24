@@ -1,0 +1,161 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+body,
+html {
+  min-height: 100vh;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+body{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f5f7;
+}
+.container{
+    flex: 1 0 0;
+    max-width: 700px;
+    background: #fefeff;
+    border-radius: .5em;
+    padding: 3.2em 1em;
+    position: relative;
+    font-family: "Wix Madefor Text", sans-serif;
+    box-shadow: -2px 15px 15px -4px rgba(0,0,0,0.75);
+    z-index: 1;
+}
+.container > h1, p{
+    text-align: center;
+    text-wrap: balance;
+}
+.container p{
+    font-size: 1.025rem;
+    font-weight: 400;
+}
+.container::before{
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 3em;
+    background: linear-gradient(to right, #fecaa6, #feedca, #c3e1b8, #8fd9f3, #d2c8fe, #fea6c7);
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1.6em;
+    z-index: -2;
+    border-radius: 1em;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 1em;
+    margin-block: 2em 1em;
+    transform-style: preserve-3d;
+}
+ul li{
+    border: 2.5px solid transparent;
+    width: 200px;
+    padding-block: 1.5em;
+    text-align: center;
+    border-radius: .5em;
+    font-weight: 500;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: .5s linear;
+    transform: perspective(100px);
+}
+li:hover{
+    transform: translateZ(4px);
+}
+li:nth-of-type(1){
+    border-color: #fecaa6;
+    box-shadow: 0px 0px 14px 0px #fecaa6;
+}
+li:nth-of-type(2){
+    border-color: #feedca;
+    box-shadow: 0px 0px 14px 0px #feedca;
+}
+li:nth-of-type(3){
+    border-color: #c3e1b8;
+    box-shadow: 0px 0px 14px 0px #c3e1b8;
+}
+li:nth-of-type(4){
+    border-color: #8fd9f3;
+    box-shadow: 0px 0px 14px 0px #8fd9f3;
+}
+li:nth-of-type(5){
+    border-color: #d2c8fe;
+    box-shadow: 0px 0px 14px 0px #d2c8fe;
+}
+li:nth-of-type(6){
+    border-color: #fea6c7;
+    box-shadow: 0px 0px 14px 0px #fea6c7;
+}
+
