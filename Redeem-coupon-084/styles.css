@@ -1,0 +1,128 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+body,
+html {
+  min-height: 100vh;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    background: #fbe9e7;
+}
+.container{
+    background: url(https://t4.ftcdn.net/jpg/04/65/26/57/360_F_465265763_YGivrnRrVWzdfQnm3ziCvk5gIIaJsg4g.jpg);
+    background-color: rgba(255, 255, 255, 0.812);
+    background-blend-mode: lighten;
+    box-shadow: -2px 15px 15px -4px rgba(90, 89, 89, 0.75);
+    flex: 1 0 0;
+    max-width: 400px;
+    border-radius: .5em;
+    padding: 3.5em 1em;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+.container > h1 , h2, h3{
+    text-transform: uppercase;
+    line-height: 1.525em;
+}
+.container h1{
+    font-size: 1.95rem;
+    padding: .15em .25em;
+    background: #f80a3e;
+    color: #fdfffb;
+    width: fit-content;
+    margin-inline: auto;
+    border-radius: .5em;
+}
+.container h2{
+    font-weight: 500;
+    font-size: 1.425rem;
+    color: #35474c;
+}
+.container h3{
+    font-size: 1.425rem;
+    color: #35474c;
+}
+.container p{
+    font-size: .875rem;
+    font-weight: 500;
+    margin-block: 1em 2.5em;
+    color: #828788;
+}
+.container label{
+    font-size: 1.225rem;
+    font-weight: 500;
+    padding: .5em;
+    background: #98989e94;
+    color: #aff7af;
+    border-radius: .25em;
+}
